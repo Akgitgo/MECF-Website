@@ -3,6 +3,7 @@ export interface BoardMember {
   name: string;
   designation: string;
   organization: string;
+  image?: string;
 }
 
 export interface CommitteeMember {
@@ -114,18 +115,18 @@ export const FUNDING_BREAKDOWN = [
 ];
 
 export const EXECUTIVE_BOARD: BoardMember[] = [
-  { sr: 1, name: "Shri D. G. Karandikar", designation: "President", organization: "MCCIA" },
-  { sr: 2, name: "Shri Prashant Girbane", designation: "Director General", organization: "MCCIA" },
-  { sr: 3, name: "Shri Pradeep Bhargava", designation: "Director & Chairman", organization: "MECF" },
-  { sr: 4, name: "Shri Anup Sable", designation: "Director", organization: "KPIT Technologies Ltd." },
-  { sr: 5, name: "Shri Aditya Paranjpe", designation: "Director", organization: "Kloudq Technologies" },
-  { sr: 6, name: "Shri Narayan Bedarkar", designation: "Director", organization: "SBEM Pvt. Ltd." },
-  { sr: 7, name: "Shri Girish Ranade", designation: "Director", organization: "Futuras Apsol Pvt. Ltd." },
-  { sr: 8, name: "Shri Sunil Sapre", designation: "Director", organization: "Persistent Systems" },
-  { sr: 9, name: "Ms. Manasi Bidkar", designation: "Director", organization: "Melux Control Gears Pvt. Ltd." },
-  { sr: 10, name: "Shri Ajay Bhagwat", designation: "Director", organization: "Renu Electronics Pvt. Ltd." },
-  { sr: 11, name: "Nikhil Jain", designation: "CEO", organization: "MECF" },
-  { sr: 12, name: "Shri Sadashiv Survase", designation: "Joint Director of Industries", organization: "DIC, Government of Maharashtra" },
+  { sr: 1, name: "Shri D. G. Karandikar", designation: "President", organization: "MCCIA", image: "/assets/images/team/karandikar.jpg" },
+  { sr: 2, name: "Shri Prashant Girbane", designation: "Director General", organization: "MCCIA", image: "/assets/images/team/girbane.jpg.jpeg" },
+  { sr: 3, name: "Shri Pradeep Bhargava", designation: "Director & Chairman", organization: "MECF", image: "/assets/images/team/bhargava.jpg" },
+  { sr: 4, name: "Shri Anup Sable", designation: "Director", organization: "KPIT Technologies Ltd.", image: "/assets/images/team/sable.jpg" },
+  { sr: 5, name: "Shri Aditya Paranjpe", designation: "Director", organization: "Kloudq Technologies", image: "/assets/images/team/paranjpe.jpg" },
+  { sr: 6, name: "Shri Narayan Bedarkar", designation: "Director", organization: "SBEM Pvt. Ltd.", image: "/assets/images/icons/MECFLOGO.png" },
+  { sr: 7, name: "Shri Girish Ranade", designation: "Director", organization: "Futuras Apsol Pvt. Ltd.", image: "/assets/images/team/ranade.jpg" },
+  { sr: 8, name: "Shri Sunil Sapre", designation: "Director", organization: "Persistent Systems", image: "/assets/images/team/sapre.jpg" },
+  { sr: 9, name: "Ms. Manasi Bidkar", designation: "Director", organization: "Melux Control Gears Pvt. Ltd.", image: "/assets/images/icons/MECFLOGO.png" },
+  { sr: 10, name: "Shri Ajay Bhagwat", designation: "Director", organization: "Renu Electronics Pvt. Ltd.", image: "/assets/images/team/bhagwat.jpg" },
+  { sr: 11, name: "Nikhil Jain", designation: "CEO", organization: "MECF", image: "/assets/images/team/nikhil-jain.jpg" },
+  { sr: 12, name: "Shri Sadashiv Survase", designation: "Joint Director of Industries", organization: "DIC, Government of Maharashtra", image: "/assets/images/team/survase.jpg" },
 ];
 
 export const EXECUTIVE_COMMITTEE: CommitteeMember[] = [
@@ -199,7 +200,7 @@ export const OPERATING_PARTNERS: PartnerInfo[] = [
   },
   {
     id: "cyronics",
-    name: "Cryonics Instruments Pvt. Ltd.",
+    name: "Cyronics Instruments Pvt. Ltd.",
     tagline: "Precision Test & Measurement Operating Partner",
     description: "Operating partner delivering high-end test instrument access, pre-compliance EMI testing, customized test solutions, solar simulation, and electronic component assembly.",
     location: "Pune, Maharashtra",

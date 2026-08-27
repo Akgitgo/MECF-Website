@@ -1,25 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { QuoteModalProvider } from "@/components/QuoteModalContext";
 import QuoteModal from "@/components/QuoteModal";
-import { SITE_CONFIG } from "@/data/siteData";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-heading",
-  display: "swap",
-});
 
 export const viewport: Viewport = {
   themeColor: "#3C5068",
@@ -77,8 +61,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} ${outfit.variable} h-full scroll-smooth`}>
-      <body className="min-h-full flex flex-col bg-[#FAF8F5] text-[#2D3748] font-sans antialiased">
+    <html lang="en" className="h-full scroll-smooth" data-scroll-behavior="smooth">
+      <body className="min-h-full flex flex-col bg-[#FBFAF8] text-[#263241] font-sans antialiased">
         <QuoteModalProvider>
           <Header />
           <main className="flex-1">{children}</main>

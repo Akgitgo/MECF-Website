@@ -8,12 +8,9 @@ import {
   EXECUTIVE_BOARD,
   EXECUTIVE_COMMITTEE,
   TEAM_DIRECTORY,
-  BoardMember,
   CommitteeMember,
-  StaffMember,
-  SITE_CONFIG,
 } from "@/data/siteData";
-import { Mail, Phone, Building2, UserCheck, ShieldCheck } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us & Institutional Governance",
@@ -22,36 +19,19 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const boardColumns: ColumnDef<BoardMember>[] = [
-    { header: "Sr.", accessorKey: "sr", className: "w-16 text-center font-mono" },
-    {
-      header: "Board Member Name",
-      cell: (row) => (
-        <span className="font-semibold text-[#2D3748]">{row.name}</span>
-      ),
-    },
-    { header: "Designation", accessorKey: "designation" },
-    {
-      header: "Organization / Industry Affiliation",
-      cell: (row) => (
-        <span className="text-[#3C5068] font-medium">{row.organization}</span>
-      ),
-    },
-  ];
-
   const committeeColumns: ColumnDef<CommitteeMember>[] = [
     { header: "Sr.", accessorKey: "sr", className: "w-16 text-center font-mono" },
     {
       header: "Committee Member Name",
       cell: (row) => (
-        <span className="font-semibold text-[#2D3748]">{row.name}</span>
+        <span className="font-semibold text-[#263241]">{row.name}</span>
       ),
     },
     { header: "Role on Committee", accessorKey: "role" },
     {
       header: "Organization",
       cell: (row) => (
-        <span className="text-[#3C5068] font-medium">{row.organization || "MECF"}</span>
+        <span className="text-[#2F4054] font-medium">{row.organization || "MECF"}</span>
       ),
     },
   ];
@@ -67,105 +47,109 @@ export default function AboutPage() {
       />
 
       {/* 1. Mission & Institutional Narrative */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
-                Our Institutional Mandate
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#2D3748] leading-tight">
-                Catalyzing Self-Reliant Indian Electronics Manufacturing
+            <div className="lg:col-span-7 space-y-6 about-reveal">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2F9C78]">
+              Our Institutional Mandate
+            </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#263241] leading-tight">
+                Shared testing infrastructure for India&apos;s electronics ecosystem.
               </h2>
-              <p className="text-base text-[#64748B] leading-relaxed">
-                The MCCIA Electronic Cluster Foundation (MECF) was founded under the visionary leadership of the Mahratta Chamber of Commerce, Industries and Agriculture (MCCIA). Approved as a Common Facility Centre under the Ministry of Electronics & Information Technology (MeitY) Electronics Manufacturing Cluster (EMC) scheme, MECF bridges the critical capital divide for electronic hardware design and compliance.
+              <p className="text-base text-[#667085] leading-8">
+                MECF was created by MCCIA as a Section 8 SPV to make high-end electronics testing accessible without each company building its own lab.
               </p>
-              <p className="text-base text-[#64748B] leading-relaxed">
-                Rather than individual companies spending tens of crores to build proprietary anechoic chambers and climatic stress cells, MECF operates as a shared, open-access, pay-for-use testing foundation serving startups, MSMEs, defense innovators, and global multinationals across the Pune-Maharashtra industrial belt and nationwide.
+              <p className="text-base text-[#667085] leading-8">
+                The facility supports startups, MSMEs, defense innovators, and multinationals with pay-per-use access to compliance-grade infrastructure.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E2E8F0]">
-                  <div className="text-xs font-bold text-[#3C5068] uppercase">Legal Status</div>
-                  <div className="text-sm font-semibold text-[#2D3748] mt-1">Section 8 Not-For-Profit SPV</div>
-                  <div className="text-xs text-[#64748B] mt-0.5">Surplus reinvested into lab upgrades</div>
+                <div className="p-4 rounded-xl bg-[#FBFAF8] border border-[#E7E2D9] about-interactive-card">
+                  <div className="text-xs font-bold text-[#2F4054] uppercase">Legal Status</div>
+                  <div className="text-sm font-semibold text-[#263241] mt-1">Section 8 Not-For-Profit SPV</div>
+                  <div className="text-xs text-[#667085] mt-0.5">Surplus reinvested into lab upgrades</div>
                 </div>
-                <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E2E8F0]">
-                  <div className="text-xs font-bold text-[#3C5068] uppercase">Land Grant</div>
-                  <div className="text-sm font-semibold text-[#2D3748] mt-1">2,500 sq. m. Industrial Plot</div>
-                  <div className="text-xs text-[#64748B] mt-0.5">Provided by MCCIA at MIDC Bhosari</div>
+                <div className="p-4 rounded-xl bg-[#FBFAF8] border border-[#E7E2D9] about-interactive-card">
+                  <div className="text-xs font-bold text-[#2F4054] uppercase">Land Grant</div>
+                  <div className="text-sm font-semibold text-[#263241] mt-1">2,500 sq. m. Industrial Plot</div>
+                  <div className="text-xs text-[#667085] mt-0.5">Provided by MCCIA at MIDC Bhosari</div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-5">
-              {/* IMAGE SLOT: facility hero or anechoic chamber */}
-              <ImageSlot
-                src="/assets/images/facility/design-prototype-center.jpg"
-                alt="MECF Engineering and Prototyping Centre at Bhosari Pune"
-                width={800}
-                height={600}
-                recommendedDimensions="800×600 px"
-                aspectRatio="aspect-[4/3]"
-                className="shadow-md"
-              />
+            <div className="lg:col-span-5 about-reveal about-reveal-delay-2">
+              <div className="app-store-card rounded-3xl overflow-hidden shadow-xl border border-[#E7E2D9]">
+                <ImageSlot
+                  src="/assets/images/facility/design-prototype-center.jpg"
+                  alt="MECF Engineering and Prototyping Centre at Bhosari Pune"
+                  width={800}
+                  height={600}
+                  badge="MIDC Bhosari, Pune"
+                  overlayTitle="MECF Engineering Centre"
+                  overlaySub="2,500 sq. m. Industrial Infrastructure"
+                  recommendedDimensions="800×600 px"
+                  aspectRatio="aspect-[4/3]"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* M-E-C-F Vision Framework Section */}
-      <section className="py-12 bg-[#FAF8F5] border-b border-[#E2E8F0]">
+      <section className="py-12 bg-[#FBFAF8] border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="max-w-3xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#4EAE87]">
+          <div className="max-w-3xl mb-8 about-reveal">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2F9C78]">
               Strategic Vision Framework
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3748] mt-1">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#263241] mt-1">
               What MECF Stands For
             </h2>
-            <p className="text-sm text-[#64748B] mt-1">
+            <p className="text-sm text-[#667085] mt-1">
               Our name defines our core promise to the Indian electronics manufacturing ecosystem.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="p-5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs relative overflow-hidden pt-6">
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-[#4EAE87]/15 text-[#3D9E78] flex items-center justify-center font-black text-base">
+            <div className="p-5 !rounded-none bg-white border border-[#E7E2D9] shadow-xs relative overflow-hidden pt-6 about-reveal about-interactive-card">
+              <div className="about-letter-badge absolute top-3 right-3 w-9 h-9 rounded-xl bg-[#2F9C78]/15 text-[#247F62] flex items-center justify-center font-black text-base">
                 M
               </div>
-              <h3 className="text-sm font-bold text-[#2D3748] mb-1 pr-10">Maximizing Potential</h3>
-              <p className="text-xs text-[#64748B] leading-relaxed">
+              <h3 className="text-sm font-bold text-[#263241] mb-1 pr-10">Maximizing Potential</h3>
+              <p className="text-xs text-[#667085] leading-6">
                 Maximizing the potential for Electronic Ecosystem&apos;s growth in and around the region.
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs relative overflow-hidden pt-6">
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-[#4EAE87]/15 text-[#3D9E78] flex items-center justify-center font-black text-base">
+            <div className="p-5 !rounded-none bg-white border border-[#E7E2D9] shadow-xs relative overflow-hidden pt-6 about-reveal about-reveal-delay-1 about-interactive-card">
+              <div className="about-letter-badge absolute top-3 right-3 w-9 h-9 rounded-xl bg-[#2F9C78]/15 text-[#247F62] flex items-center justify-center font-black text-base">
                 E
               </div>
-              <h3 className="text-sm font-bold text-[#2D3748] mb-1 pr-10">Enabling Innovations</h3>
-              <p className="text-xs text-[#64748B] leading-relaxed">
+              <h3 className="text-sm font-bold text-[#263241] mb-1 pr-10">Enabling Innovations</h3>
+              <p className="text-xs text-[#667085] leading-6">
                 Enabling innovations through comprehensive, high-precision technical services.
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs relative overflow-hidden pt-6">
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-[#4EAE87]/15 text-[#3D9E78] flex items-center justify-center font-black text-base">
+            <div className="p-5 !rounded-none bg-white border border-[#E7E2D9] shadow-xs relative overflow-hidden pt-6 about-reveal about-reveal-delay-2 about-interactive-card">
+              <div className="about-letter-badge absolute top-3 right-3 w-9 h-9 rounded-xl bg-[#2F9C78]/15 text-[#247F62] flex items-center justify-center font-black text-base">
                 C
               </div>
-              <h3 className="text-sm font-bold text-[#2D3748] mb-1 pr-10">Competitive &amp; Faster</h3>
-              <p className="text-xs text-[#64748B] leading-relaxed">
+              <h3 className="text-sm font-bold text-[#263241] mb-1 pr-10">Competitive &amp; Faster</h3>
+              <p className="text-xs text-[#667085] leading-6">
                 Competitive and faster testing &amp; certification services under one roof.
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs relative overflow-hidden pt-6">
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-[#4EAE87]/15 text-[#3D9E78] flex items-center justify-center font-black text-base">
+            <div className="p-5 !rounded-none bg-white border border-[#E7E2D9] shadow-xs relative overflow-hidden pt-6 about-reveal about-reveal-delay-3 about-interactive-card">
+              <div className="about-letter-badge absolute top-3 right-3 w-9 h-9 rounded-xl bg-[#2F9C78]/15 text-[#247F62] flex items-center justify-center font-black text-base">
                 F
               </div>
-              <h3 className="text-sm font-bold text-[#2D3748] mb-1 pr-10">Facilitating Industry</h3>
-              <p className="text-xs text-[#64748B] leading-relaxed">
+              <h3 className="text-sm font-bold text-[#263241] mb-1 pr-10">Facilitating Industry</h3>
+              <p className="text-xs text-[#667085] leading-6">
                 Facilitating wider range of industry like MSME &amp; start-ups to save cost and time in product development.
               </p>
             </div>
@@ -173,63 +157,96 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Executive Board Table */}
-      <section className="py-16 sm:py-20 bg-[#F0F4F8] border-b border-[#E2E8F0]">
+      {/* 2. Executive Board Image Cards */}
+      <section className="py-16 sm:py-20 bg-[#F6F4F0] border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="max-w-3xl mb-8">
+          <div className="max-w-3xl mb-12 about-reveal">
             <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
               Board of Directors
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3748] mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#263241] mt-1">
               Executive Board of MECF
             </h2>
-            <p className="text-sm text-[#64748B] mt-2">
+            <p className="text-sm text-[#667085] mt-2">
               Composed of esteemed industry leaders, chamber executives, and government representatives guiding the cluster foundation.
             </p>
           </div>
 
-          <SpecTable
-            columns={boardColumns}
-            data={EXECUTIVE_BOARD}
-            caption="MECF Board of Directors (12 Members)"
-          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {EXECUTIVE_BOARD.map((member) => (
+              <div
+                key={member.sr}
+                className="p-5 rounded-2xl bg-white border border-[#E7E2D9] shadow-xs hover:shadow-md transition-all flex flex-col justify-between group about-reveal about-interactive-card"
+                style={{ animationDelay: `${Math.min(member.sr, 8) * 55}ms` }}
+              >
+                <div>
+                  <ImageSlot
+                    src={member.image || `/assets/images/team/member-${member.sr}.jpg`}
+                    alt={member.name}
+                    width={400}
+                    height={400}
+                    recommendedDimensions="400×400 px"
+                    aspectRatio="aspect-square"
+                    className="rounded-xl overflow-hidden mb-4"
+                  />
+
+                  <div className="space-y-1">
+                    <span className="px-2.5 py-0.5 rounded-xl text-[11px] font-bold bg-[#FBFAF8] text-[#2F4054] border border-[#E7E2D9] inline-block">
+                      {member.designation}
+                    </span>
+                    <h3 className="text-base font-bold text-[#263241] tracking-tight pt-1">
+                      {member.name}
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="pt-3 mt-3 border-t border-[#E7E2D9]">
+                  <span className="text-xs font-medium text-[#667085] block truncate">
+                    {member.organization}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* 3. Executive Committee Table */}
-      <section className="py-16 bg-white border-b border-[#E2E8F0]">
+      <section className="py-16 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="max-w-3xl mb-8">
+          <div className="max-w-3xl mb-8 about-reveal">
             <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
               Operational Leadership
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3748] mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#263241] mt-1">
               Executive Committee
             </h2>
-            <p className="text-sm text-[#64748B] mt-2">
+            <p className="text-sm text-[#667085] mt-2">
               Overseeing day-to-day facility execution, technical partnerships, and infrastructure expansions.
             </p>
           </div>
 
-          <SpecTable
-            columns={committeeColumns}
-            data={EXECUTIVE_COMMITTEE}
-            caption="MECF Executive Committee"
-          />
+          <div className="about-reveal about-reveal-delay-1">
+            <SpecTable
+              columns={committeeColumns}
+              data={EXECUTIVE_COMMITTEE}
+              caption="MECF Executive Committee"
+            />
+          </div>
         </div>
       </section>
 
       {/* 4. Our Team Staff Cards */}
-      <section className="py-16 sm:py-20 bg-[#F0F4F8] border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-20 bg-[#F6F4F0] border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-12 about-reveal">
             <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
               Facility Staff
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3748] mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#263241] mt-1">
               Our Operations & Technical Team
             </h2>
-            <p className="text-sm text-[#64748B] mt-2">
+            <p className="text-sm text-[#667085] mt-2">
               Direct contacts for lab chamber scheduling, test quotes, facility maintenance, and accounts.
             </p>
           </div>
@@ -238,35 +255,36 @@ export default function AboutPage() {
             {TEAM_DIRECTORY.map((member, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-[#E2E8F0] apple-card-shadow flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white border border-[#E7E2D9] apple-card-shadow flex flex-col justify-between about-reveal about-interactive-card"
+                style={{ animationDelay: `${idx * 70}ms` }}
               >
                 <div>
-                  <div className="w-12 h-12 rounded-full bg-[#3C5068] text-white flex items-center justify-center font-bold text-base mb-4">
+                  <div className="about-letter-badge w-12 h-12 rounded-xl bg-[#2F4054] text-white flex items-center justify-center font-bold text-base mb-4">
                     {member.name.split(" ").slice(-1)[0][0]}
                   </div>
 
-                  <h3 className="text-base font-bold text-[#2D3748] tracking-tight">
+                  <h3 className="text-base font-bold text-[#263241] tracking-tight">
                     {member.name}
                   </h3>
                   <div className="text-xs font-semibold text-[#5C82A6] mt-0.5">
                     {member.role}
                   </div>
-                  <div className="text-[11px] text-[#64748B] mt-2 leading-relaxed">
+                  <div className="text-[11px] text-[#667085] mt-2 leading-relaxed">
                     {member.department}
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#F0F4F8] space-y-2 text-xs">
+                <div className="mt-6 pt-4 border-t border-[#F6F4F0] space-y-2 text-xs">
                   <a
                     href={`mailto:${member.email}`}
-                    className="flex items-center gap-2 text-[#64748B] hover:text-[#4EAE87] transition-colors"
+                    className="flex items-center gap-2 text-[#667085] hover:text-[#2F9C78] transition-colors"
                   >
                     <Mail className="w-3.5 h-3.5 text-[#5C82A6] shrink-0" />
                     <span className="truncate">{member.email}</span>
                   </a>
                   <a
                     href={`tel:${member.phone.replace(/\s+/g, "")}`}
-                    className="flex items-center gap-2 text-[#64748B] hover:text-[#4EAE87] transition-colors"
+                    className="flex items-center gap-2 text-[#667085] hover:text-[#2F9C78] transition-colors"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#5C82A6] shrink-0" />
                     <span>{member.phone}</span>

@@ -14,7 +14,7 @@ interface SpecTableProps<T> {
   className?: string;
 }
 
-export default function SpecTable<T extends Record<string, any>>({
+export default function SpecTable<T extends object>({
   columns,
   data,
   caption,

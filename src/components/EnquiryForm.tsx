@@ -65,12 +65,12 @@ export default function EnquiryForm({
 
   if (status === "success") {
     return (
-      <div className="p-8 rounded-2xl bg-white border border-[#4EAE87]/30 text-center shadow-xs">
-        <div className="w-14 h-14 rounded-full bg-[#4EAE87]/10 text-[#4EAE87] flex items-center justify-center mx-auto mb-4">
+      <div className="p-8 rounded-2xl bg-white border border-[#2F9C78]/30 text-center premium-card">
+        <div className="w-14 h-14 rounded-2xl bg-[#4EAE87]/10 text-[#4EAE87] flex items-center justify-center mx-auto mb-4">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold text-[#2D3748] mb-2">Enquiry Received</h3>
-        <p className="text-sm text-[#64748B] max-w-md mx-auto leading-relaxed mb-6">
+        <h3 className="text-2xl font-bold text-[#263241] mb-2">Enquiry Received</h3>
+        <p className="text-sm text-[#667085] max-w-md mx-auto leading-7 mb-6">
           Thank you for reaching out to MCCIA Electronic Cluster Foundation. Our technical coordinator will review your requirement and respond within 1 business day.
         </p>
         <button
@@ -97,14 +97,14 @@ export default function EnquiryForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={`bg-white rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-xs ${className}`}
+      className={`flex h-full flex-col bg-white rounded-2xl p-6 sm:p-8 border border-[#E7E2D9] premium-card ${className}`}
     >
       <div className="mb-6">
-        <h3 className="text-xl sm:text-2xl font-bold text-[#2D3748] tracking-tight">
+        <h3 className="text-xl sm:text-2xl font-bold text-[#263241]">
           Request a Quote / Facility Slot
         </h3>
-        <p className="text-sm text-[#64748B] mt-1">
-          Connect directly with MECF engineers for testing schedules, rate cards, and technical consultations.
+        <p className="text-sm text-[#667085] mt-1">
+          Share your test scope and our team will respond with the right schedule, standards path, and next step.
         </p>
       </div>
 
@@ -128,7 +128,7 @@ export default function EnquiryForm({
             value={formData.name}
             onChange={handleChange}
             placeholder="e.g. Rajesh Sharma"
-            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E2E8F0] bg-[#FAF8F5] text-[#2D3748] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4EAE87]/30 focus:border-[#4EAE87] transition-all"
+            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E7E2D9] bg-[#FBFAF8] text-[#263241] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F9C78]/25 focus:border-[#2F9C78] transition-all"
           />
         </div>
 
@@ -144,7 +144,7 @@ export default function EnquiryForm({
             value={formData.email}
             onChange={handleChange}
             placeholder="rajesh@company.com"
-            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E2E8F0] bg-[#FAF8F5] text-[#2D3748] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4EAE87]/30 focus:border-[#4EAE87] transition-all"
+            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E7E2D9] bg-[#FBFAF8] text-[#263241] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F9C78]/25 focus:border-[#2F9C78] transition-all"
           />
         </div>
       </div>
@@ -162,7 +162,7 @@ export default function EnquiryForm({
             value={formData.phone}
             onChange={handleChange}
             placeholder="+91 98765 43210"
-            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E2E8F0] bg-[#FAF8F5] text-[#2D3748] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4EAE87]/30 focus:border-[#4EAE87] transition-all"
+            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E7E2D9] bg-[#FBFAF8] text-[#263241] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F9C78]/25 focus:border-[#2F9C78] transition-all"
           />
         </div>
 
@@ -177,7 +177,7 @@ export default function EnquiryForm({
             value={formData.organization}
             onChange={handleChange}
             placeholder="e.g. Acme Electronics Pvt Ltd"
-            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E2E8F0] bg-[#FAF8F5] text-[#2D3748] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4EAE87]/30 focus:border-[#4EAE87] transition-all"
+            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E7E2D9] bg-[#FBFAF8] text-[#263241] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F9C78]/25 focus:border-[#2F9C78] transition-all"
           />
         </div>
       </div>
@@ -192,7 +192,7 @@ export default function EnquiryForm({
             name="organizationType"
             value={formData.organizationType}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E2E8F0] bg-[#FAF8F5] text-[#2D3748] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4EAE87]/30 focus:border-[#4EAE87] transition-all"
+            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E7E2D9] bg-[#FBFAF8] text-[#263241] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F9C78]/25 focus:border-[#2F9C78] transition-all"
           >
             <option value="Registered MSME">Registered MSME (Eligible for 50% Discount)</option>
             <option value="MCCIA Member">MCCIA Member (Eligible for 50% Discount)</option>
@@ -213,7 +213,7 @@ export default function EnquiryForm({
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E2E8F0] bg-[#FAF8F5] text-[#2D3748] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4EAE87]/30 focus:border-[#4EAE87] transition-all"
+            className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E7E2D9] bg-[#FBFAF8] text-[#263241] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F9C78]/25 focus:border-[#2F9C78] transition-all"
           >
             <option value="Safety Testing">Safety Testing (IEC 60950/61010/62368/60335)</option>
             <option value="Reliability & Environmental Testing">Reliability & Environmental Testing (Climatic / Thermal Shock)</option>
@@ -227,13 +227,6 @@ export default function EnquiryForm({
         </div>
       </div>
 
-      {/* Promo Offer Checkbox Callout */}
-      <div className="mb-4 p-3 rounded-xl bg-[#4EAE87]/15 border border-[#4EAE87]/30 flex items-center justify-between text-xs text-[#3C5068]">
-        <span className="font-semibold text-[#3D9E78]">
-          ⚡ Claim Up to 50% Discount for MSMEs & MCCIA Members (Valid till 31st Aug 2026)
-        </span>
-      </div>
-
       {/* Message / Scope */}
       <div className="mb-6">
         <label className="block text-xs font-semibold text-[#2D3748] uppercase tracking-wider mb-1.5">
@@ -245,7 +238,7 @@ export default function EnquiryForm({
           value={formData.message}
           onChange={handleChange}
           placeholder="Please describe your product type, target standards, sample dimensions, and preferred testing timeline..."
-          className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E2E8F0] bg-[#FAF8F5] text-[#2D3748] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4EAE87]/30 focus:border-[#4EAE87] transition-all resize-none"
+          className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-[#E7E2D9] bg-[#FBFAF8] text-[#263241] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F9C78]/25 focus:border-[#2F9C78] transition-all resize-none"
         ></textarea>
       </div>
 
@@ -253,7 +246,7 @@ export default function EnquiryForm({
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-medium text-white bg-[#4EAE87] hover:bg-[#3D9E78] active:scale-[0.99] transition-all shadow-xs disabled:opacity-70 cursor-pointer"
+        className="mt-auto w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-medium text-white bg-[#2F9C78] hover:bg-[#247F62] active:scale-[0.99] transition-all btn-premium disabled:opacity-70 cursor-pointer"
       >
         {status === "submitting" ? (
           <span>Transmitting Request...</span>

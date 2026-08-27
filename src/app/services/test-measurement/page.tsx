@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import SpecTable, { ColumnDef } from "@/components/SpecTable";
 import ImageSlot from "@/components/ImagePlaceholder";
 import CtaBanner from "@/components/CtaBanner";
-import { Sliders, CheckCircle2, Cpu, Wrench, Clock, ShieldCheck } from "lucide-react";
+import { Wrench, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Test & Measurement Lab & Equipment Rental — Cyronics Instruments Partnership",
@@ -82,39 +82,39 @@ export default function TestMeasurementPage() {
       />
 
       {/* 1. Overview */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
                 Cyronics Partnership Overview
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#2D3748] leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#263241] leading-tight">
                 Democratizing High-End Electronics Diagnostic Tools
               </h2>
-              <p className="text-base text-[#64748B] leading-relaxed">
+              <p className="text-base text-[#667085] leading-relaxed">
                 R&D hardware development requires top-tier diagnostic instruments that are often prohibitively expensive to purchase outright for single product cycles. In partnership with Pune-based precision electronics pioneer Cyronics Instruments, MECF provides flexible instrument access.
               </p>
-              <p className="text-base text-[#64748B] leading-relaxed">
+              <p className="text-base text-[#667085] leading-relaxed">
                 Whether you need a 4 GHz oscilloscope for 3 days of high-speed bus debugging, an RF spectrum analyzer for near-field probe troubleshooting, or certified calibration for your internal quality meters, MECF delivers instant availability.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E2E8F0]">
-                  <div className="flex items-center gap-2 text-xs font-bold text-[#3C5068] uppercase">
+                <div className="p-4 rounded-xl bg-[#FBFAF8] border border-[#E7E2D9]">
+                  <div className="flex items-center gap-2 text-xs font-bold text-[#2F4054] uppercase">
                     <Clock className="w-4 h-4 text-[#5C82A6]" />
                     Flexible Rental Durations
                   </div>
-                  <div className="text-xs text-[#64748B] mt-1">
+                  <div className="text-xs text-[#667085] mt-1">
                     Daily, weekly, or project-based on-site lab equipment rental.
                   </div>
                 </div>
-                <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E2E8F0]">
-                  <div className="flex items-center gap-2 text-xs font-bold text-[#3C5068] uppercase">
+                <div className="p-4 rounded-xl bg-[#FBFAF8] border border-[#E7E2D9]">
+                  <div className="flex items-center gap-2 text-xs font-bold text-[#2F4054] uppercase">
                     <Wrench className="w-4 h-4 text-[#5C82A6]" />
                     Engineering Debugging Support
                   </div>
-                  <div className="text-xs text-[#64748B] mt-1">
+                  <div className="text-xs text-[#667085] mt-1">
                     On-bench assistance from experienced test engineers.
                   </div>
                 </div>
@@ -122,32 +122,35 @@ export default function TestMeasurementPage() {
             </div>
 
             <div className="lg:col-span-5">
-              {/* IMAGE SLOT: SMT Line / Test Bench */}
-              <ImageSlot
-                src="/assets/images/facility/smt-line.jpg"
-                alt="Cyronics Test & Measurement Benches at MECF Bhosari"
-                width={800}
-                height={600}
-                recommendedDimensions="800×600 px"
-                aspectRatio="aspect-[4/3]"
-                className="shadow-md"
-              />
+              <div className="app-store-card rounded-3xl overflow-hidden shadow-xl border border-[#E7E2D9]">
+                <ImageSlot
+                  src="/assets/images/facility/smt-line.jpg"
+                  alt="Cyronics Test & Measurement Benches at MECF Bhosari"
+                  width={800}
+                  height={600}
+                  badge="On-Demand Rental & SMT"
+                  overlayTitle="Cyronics Precision Lab"
+                  overlaySub="Advanced Instrumentation Bench"
+                  recommendedDimensions="800×600 px"
+                  aspectRatio="aspect-[4/3]"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 2. Equipment Rental Specs Table */}
-      <section className="py-16 bg-[#F0F4F8] border-b border-[#E2E8F0]">
+      <section className="py-16 bg-[#F6F4F0] border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="max-w-3xl mb-8">
             <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
               Equipment Catalog
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3748] mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#263241] mt-1">
               On-Demand Rental & Diagnostic Instruments
             </h2>
-            <p className="text-sm text-[#64748B] mt-2">
+            <p className="text-sm text-[#667085] mt-2">
               All rental equipment is calibrated and maintained to stringent NABL traceability standards.
             </p>
           </div>
@@ -161,30 +164,30 @@ export default function TestMeasurementPage() {
       </section>
 
       {/* 3. Core Service Pillars */}
-      <section className="py-16 bg-white border-b border-[#E2E8F0]">
+      <section className="py-16 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E2E8F0]">
-              <h3 className="text-lg font-bold text-[#2D3748] mb-2">
+            <div className="p-6 rounded-2xl bg-[#FBFAF8] border border-[#E7E2D9]">
+              <h3 className="text-lg font-bold text-[#263241] mb-2">
                 1. Test &amp; Measurement Equipment Rental
               </h3>
-              <p className="text-xs text-[#64748B] leading-relaxed">
+              <p className="text-xs text-[#667085] leading-relaxed">
                 Rent top-brand oscilloscopes, network analyzers, and power sources for in-lab testing at MECF or deploy them temporarily to your R&amp;D facility.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E2E8F0]">
-              <h3 className="text-lg font-bold text-[#2D3748] mb-2">
+            <div className="p-6 rounded-2xl bg-[#FBFAF8] border border-[#E7E2D9]">
+              <h3 className="text-lg font-bold text-[#263241] mb-2">
                 2. Solar Simulation &amp; Monitoring
               </h3>
-              <p className="text-xs text-[#64748B] leading-relaxed">
+              <p className="text-xs text-[#667085] leading-relaxed">
                 Advanced solar simulation, IV curve profiling, and continuous environmental monitoring for solar PV and renewable energy electronics.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E2E8F0]">
-              <h3 className="text-lg font-bold text-[#2D3748] mb-2">
+            <div className="p-6 rounded-2xl bg-[#FBFAF8] border border-[#E7E2D9]">
+              <h3 className="text-lg font-bold text-[#263241] mb-2">
                 3. PCB, SMT &amp; BGA Soldering / Rework
               </h3>
-              <p className="text-xs text-[#64748B] leading-relaxed">
+              <p className="text-xs text-[#667085] leading-relaxed">
                 Precision PCB hand soldering, Surface Mount Technology (SMT) assembly, and Ball Grid Array (BGA) rework stations for prototype modifications.
               </p>
             </div>

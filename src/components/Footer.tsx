@@ -1,14 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   MapPin,
   Phone,
   Mail,
   Clock,
   ShieldCheck,
-  Zap,
-  ArrowUpRight,
 } from "lucide-react";
 import { SITE_CONFIG } from "@/data/siteData";
 
@@ -72,29 +69,17 @@ function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3C5068] text-white pt-16 pb-12 border-t border-white/10">
+    <footer className="site-footer bg-white text-[#263241] pt-6 pb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 pb-5">
           {/* Col 1: About / Brand Lockup */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block group">
-              <div className="bg-white p-2.5 rounded-xl inline-flex items-center justify-center group-hover:scale-[1.02] transition-transform shadow-xs">
-                <Image
-                  src="/assets/images/icons/MECFLOGO.png"
-                  alt="MECF - MCCIA Electronic Cluster Foundation"
-                  width={180}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
-            </Link>
-
-            <p className="text-sm text-[#E2E8F0] leading-relaxed max-w-sm">
+            <p className="text-sm text-[#667085] leading-relaxed max-w-sm">
               Approved Common Facility Centre (CFC) under the Electronics Manufacturing Cluster (EMC) Scheme, Ministry of Electronics & IT (MeitY), Government of India. Operating Section 8 not-for-profit SPV by MCCIA.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#4EAE87]/20 text-[#74C69D] border border-[#4EAE87]/40">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-semibold bg-[#4EAE87]/20 text-[#74C69D] border border-[#4EAE87]/40">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 NABL Accredited Testing Facility
               </span>
@@ -292,7 +277,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#D2D2D7]/70 gap-4">
+        <div className="pt-3 flex flex-col sm:flex-row items-center justify-between text-xs text-[#98A2B3] gap-2">
           <p>
             Copyright © {new Date().getFullYear()} {SITE_CONFIG.fullName}. All Rights Reserved.
           </p>

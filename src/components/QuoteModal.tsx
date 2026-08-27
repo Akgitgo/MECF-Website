@@ -28,7 +28,7 @@ export default function QuoteModal() {
       >
         <button
           onClick={closeQuoteModal}
-          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-[#F0F4F8] hover:bg-[#E2E8F0] text-[#2D3748] flex items-center justify-center transition-colors cursor-pointer"
+          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-xl bg-[#F0F4F8] hover:bg-[#E2E8F0] text-[#2D3748] flex items-center justify-center transition-colors cursor-pointer"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />

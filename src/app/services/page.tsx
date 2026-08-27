@@ -11,11 +11,8 @@ import {
   Cpu,
   ArrowRight,
   CheckCircle2,
-  Layers,
-  Zap,
   ThermometerSnowflake,
   Gauge,
-  Boxes,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -110,54 +107,54 @@ export default function ServicesPage() {
       />
 
       {/* 1. Pay-Per-Use Model Intro */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="max-w-3xl mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2F9C78]">
               Pay-for-Use Flexibility
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#2D3748] mt-1">
-              Zero Heavy Capex. World-Class Infrastructure on Demand.
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#263241] mt-1">
+              High-capital testing infrastructure, available on demand.
             </h2>
-            <p className="text-base text-[#64748B] mt-3 leading-relaxed">
-              MECF operates on an open-access model designed to eliminate barrier-to-entry testing costs for Indian hardware manufacturers. Reserve lab slots on an hourly, daily, or project basis.
+            <p className="text-base text-[#667085] mt-3 leading-8">
+              Reserve the facility you need without building your own chamber, shaker, or specialist lab. MECF supports hourly, daily, and project-based testing workflows.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E2E8F0]">
-              <div className="w-10 h-10 rounded-xl bg-[#5C82A6]/12 text-[#3C5068] flex items-center justify-center mb-4">
+            <div className="p-6 rounded-2xl bg-[#FBFAF8] border border-[#E7E2D9]">
+              <div className="w-10 h-10 rounded-xl bg-[#2F4054]/10 text-[#2F4054] flex items-center justify-center mb-4">
                 <ThermometerSnowflake className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-[#2D3748]">
+              <h3 className="text-base font-bold text-[#263241]">
                 Climatic & Mechanical Stress
               </h3>
-              <p className="text-xs text-[#64748B] mt-2 leading-relaxed">
-                From walk-in humidity rooms to thermal shock basket transfers and 3.5T shaker tables, validate your product against harsh automotive and aerospace profiles.
+              <p className="text-xs text-[#667085] mt-2 leading-6">
+                Validate against climatic, transport, automotive and rugged operating profiles.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E2E8F0]">
-              <div className="w-10 h-10 rounded-xl bg-[#5C82A6]/12 text-[#3C5068] flex items-center justify-center mb-4">
+            <div className="p-6 rounded-2xl bg-[#FBFAF8] border border-[#E7E2D9]">
+              <div className="w-10 h-10 rounded-xl bg-[#2F4054]/10 text-[#2F4054] flex items-center justify-center mb-4">
                 <Radio className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-[#2D3748]">
+              <h3 className="text-base font-bold text-[#263241]">
                 Full-Scale 10m Anechoic SAC
               </h3>
-              <p className="text-xs text-[#64748B] mt-2 leading-relaxed">
-                Test products weighing up to 3,000 kg with an automated 3m turntable. Conduct radiated emissions and immunity from 9 kHz up to 40 GHz.
+              <p className="text-xs text-[#667085] mt-2 leading-6">
+                Conduct radiated emissions and immunity from 9 kHz to 40 GHz.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E2E8F0]">
-              <div className="w-10 h-10 rounded-xl bg-[#5C82A6]/12 text-[#3C5068] flex items-center justify-center mb-4">
+            <div className="p-6 rounded-2xl bg-[#FBFAF8] border border-[#E7E2D9]">
+              <div className="w-10 h-10 rounded-xl bg-[#2F4054]/10 text-[#2F4054] flex items-center justify-center mb-4">
                 <Gauge className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-[#2D3748]">
+              <h3 className="text-base font-bold text-[#263241]">
                 NABL Validated Reports
               </h3>
-              <p className="text-xs text-[#64748B] mt-2 leading-relaxed">
-                Test reports issued with full NABL traceability and international bilateral recognition for seamless global market entry.
+              <p className="text-xs text-[#667085] mt-2 leading-6">
+                Generate traceable documentation for domestic and export compliance pathways.
               </p>
             </div>
           </div>
@@ -165,7 +162,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 2. Four Detailed Vertical Blocks */}
-      <section className="py-16 sm:py-24 bg-[#F0F4F8] border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-24 bg-[#F6F4F0] border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
           {verticals.map((vertical, idx) => {
             const Icon = vertical.icon;
@@ -175,7 +172,7 @@ export default function ServicesPage() {
               <div
                 key={vertical.id}
                 id={vertical.id}
-                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E2E8F0] apple-card-shadow scroll-mt-24"
+                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E7E2D9] apple-card-shadow scroll-mt-24 premium-card"
               >
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center ${
@@ -187,7 +184,7 @@ export default function ServicesPage() {
                       <div className="w-10 h-10 rounded-xl bg-[#5C82A6]/12 text-[#3C5068] flex items-center justify-center">
                         <Icon className="w-5 h-5" />
                       </div>
-                      <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#FAF8F5] text-[#2D3748] border border-[#E2E8F0]">
+                      <span className="px-3 py-1 rounded-xl text-xs font-semibold bg-[#FBFAF8] text-[#263241] border border-[#E7E2D9]">
                         {vertical.badge}
                       </span>
                     </div>
@@ -196,20 +193,20 @@ export default function ServicesPage() {
                       <div className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
                         Operating Partner: {vertical.partner}
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3748] mt-1">
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-[#263241] mt-1">
                         {vertical.title}
                       </h3>
                     </div>
 
-                    <p className="text-sm text-[#64748B] leading-relaxed">
+                    <p className="text-sm text-[#667085] leading-7">
                       {vertical.description}
                     </p>
 
                     <div className="space-y-2.5 pt-2">
                       {vertical.specs.map((spec, sIdx) => (
                         <div key={sIdx} className="flex items-start gap-2.5">
-                          <CheckCircle2 className="w-4 h-4 text-[#4EAE87] shrink-0 mt-0.5" />
-                          <span className="text-xs text-[#2D3748] leading-normal">{spec}</span>
+                          <CheckCircle2 className="w-4 h-4 text-[#2F9C78] shrink-0 mt-0.5" />
+                          <span className="text-xs text-[#263241] leading-normal">{spec}</span>
                         </div>
                       ))}
                     </div>
@@ -217,7 +214,7 @@ export default function ServicesPage() {
                     <div className="pt-4">
                       <Link
                         href={vertical.href}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-xs text-white bg-[#4EAE87] hover:bg-[#3D9E78] transition-all shadow-xs"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-xs text-white bg-[#2F9C78] hover:bg-[#247F62] transition-all btn-premium"
                       >
                         <span>View Technical Specs & Test Matrix</span>
                         <ArrowRight className="w-4 h-4" />
@@ -231,9 +228,12 @@ export default function ServicesPage() {
                       alt={vertical.title}
                       width={800}
                       height={600}
+                      badge={vertical.badge}
+                      overlayTitle={vertical.title}
+                      overlaySub={`Operating Partner: ${vertical.partner}`}
                       recommendedDimensions="800×600 px"
                       aspectRatio="aspect-[4/3]"
-                      className="shadow-sm"
+                      className="shadow-md rounded-3xl"
                     />
                   </div>
                 </div>

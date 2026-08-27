@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import CtaBanner from "@/components/CtaBanner";
 import { SITE_CONFIG } from "@/data/siteData";
-import { ShieldCheck, FileText, Download, Landmark, CheckCircle2, Lock } from "lucide-react";
+import { ShieldCheck, Download, Landmark, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Statutory & Compliance Disclosures — NABL Accreditation & Section 8 Details",
@@ -53,44 +53,44 @@ export default function StatutoryCompliancePage() {
       />
 
       {/* 1. Institutional Governance Overview */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
                 Institutional Trust & Authenticity
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#2D3748] leading-tight">
-                Operating with Utmost Regulatory Rigor
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#263241] leading-tight">
+                Trust signals for procurement, audits, and certification teams.
               </h2>
-              <p className="text-base text-[#64748B] leading-relaxed">
-                As a MeitY-sanctioned Common Facility Centre and Section 8 company, MECF complies with all applicable Central, State, and international laboratory standards. Test reports generated at our Pune facility carry recognized legal validity across export jurisdictions.
+              <p className="text-base text-[#667085] leading-8">
+                MECF&apos;s statutory and accreditation disclosures help customers validate the institution before sharing product data, booking lab capacity, or using reports for market access.
               </p>
 
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#4EAE87] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#2F9C78] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-sm text-[#2D3748]">Section 8 Special Purpose Vehicle (SPV):</strong>
-                    <span className="text-sm text-[#64748B] ml-1">
+                    <strong className="text-sm text-[#263241]">Section 8 Special Purpose Vehicle (SPV):</strong>
+                    <span className="text-sm text-[#667085] ml-1">
                       Promoted by MCCIA with no commercial dividend distribution; all revenues are reinvested into lab instrumentation.
                     </span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#4EAE87] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#2F9C78] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-sm text-[#2D3748]">NABL ISO/IEC 17025 Alignment:</strong>
-                    <span className="text-sm text-[#64748B] ml-1">
+                    <strong className="text-sm text-[#263241]">NABL ISO/IEC 17025 Alignment:</strong>
+                    <span className="text-sm text-[#667085] ml-1">
                       Calibration and testing procedures adhere to rigorous global traceability benchmarks.
                     </span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#4EAE87] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#2F9C78] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-sm text-[#2D3748]">Data Confidentiality & IP Protection:</strong>
-                    <span className="text-sm text-[#64748B] ml-1">
+                    <strong className="text-sm text-[#263241]">Data Confidentiality & IP Protection:</strong>
+                    <span className="text-sm text-[#667085] ml-1">
                       Strict non-disclosure agreements (NDAs) govern all client CAD models, schematics, and test reports.
                     </span>
                   </div>
@@ -98,32 +98,32 @@ export default function StatutoryCompliancePage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-[#FAF8F5] p-8 rounded-3xl border border-[#E2E8F0] space-y-4">
+            <div className="lg:col-span-5 bg-[#FBFAF8] p-8 rounded-3xl border border-[#E7E2D9] space-y-4">
               <div className="flex items-center gap-3">
-                <Landmark className="w-6 h-6 text-[#3C5068]" />
-                <h3 className="text-lg font-bold text-[#2D3748]">Legal Registration Profile</h3>
+                <Landmark className="w-6 h-6 text-[#2F4054]" />
+                <h3 className="text-lg font-bold text-[#263241]">Legal Registration Profile</h3>
               </div>
 
               <div className="space-y-2.5 text-xs">
-                <div className="flex justify-between py-1.5 border-b border-[#E2E8F0]">
-                  <span className="text-[#64748B]">Legal Entity:</span>
-                  <span className="font-semibold text-[#2D3748] text-right">{SITE_CONFIG.fullName}</span>
+                <div className="flex justify-between py-1.5 border-b border-[#E7E2D9]">
+                  <span className="text-[#667085]">Legal Entity:</span>
+                  <span className="font-semibold text-[#263241] text-right">{SITE_CONFIG.fullName}</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-[#E2E8F0]">
-                  <span className="text-[#64748B]">Corporate Form:</span>
-                  <span className="font-semibold text-[#2D3748]">Section 8 Not-For-Profit</span>
+                <div className="flex justify-between py-1.5 border-b border-[#E7E2D9]">
+                  <span className="text-[#667085]">Corporate Form:</span>
+                  <span className="font-semibold text-[#263241]">Section 8 Not-For-Profit</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-[#E2E8F0]">
-                  <span className="text-[#64748B]">Promoting Body:</span>
-                  <span className="font-semibold text-[#2D3748]">MCCIA (Pune)</span>
+                <div className="flex justify-between py-1.5 border-b border-[#E7E2D9]">
+                  <span className="text-[#667085]">Promoting Body:</span>
+                  <span className="font-semibold text-[#263241]">MCCIA (Pune)</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-[#E2E8F0]">
-                  <span className="text-[#64748B]">Central Scheme:</span>
-                  <span className="font-semibold text-[#2D3748]">MeitY EMC Scheme (Govt of India)</span>
+                <div className="flex justify-between py-1.5 border-b border-[#E7E2D9]">
+                  <span className="text-[#667085]">Central Scheme:</span>
+                  <span className="font-semibold text-[#263241]">MeitY EMC Scheme (Govt of India)</span>
                 </div>
                 <div className="flex justify-between py-1.5">
-                  <span className="text-[#64748B]">State Facilitation:</span>
-                  <span className="font-semibold text-[#2D3748]">MIDC Maharashtra Electronics Policy</span>
+                  <span className="text-[#667085]">State Facilitation:</span>
+                  <span className="font-semibold text-[#263241]">MIDC Maharashtra Electronics Policy</span>
                 </div>
               </div>
             </div>
@@ -132,16 +132,16 @@ export default function StatutoryCompliancePage() {
       </section>
 
       {/* 2. Downloadable Certificate Slots */}
-      <section className="py-16 bg-[#F0F4F8] border-b border-[#E2E8F0]">
+      <section className="py-16 bg-[#F6F4F0] border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="max-w-3xl mb-10">
             <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
               Accreditation Documents
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3748] mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#263241] mt-1">
               Compliance Certificates & Sanction Documents
             </h2>
-            <p className="text-sm text-[#64748B] mt-2">
+            <p className="text-sm text-[#667085] mt-2">
               Official document slots for NABL certificates, regulatory approvals, and corporate filings.
             </p>
           </div>
@@ -150,30 +150,30 @@ export default function StatutoryCompliancePage() {
             {complianceDocs.map((doc, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-[#E2E8F0] apple-card-shadow flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white border border-[#E7E2D9] apple-card-shadow flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-[11px] font-bold uppercase tracking-wider text-[#5C82A6]">
                       {doc.category}
                     </span>
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#4EAE87]/15 text-[#3D9E78] border border-[#4EAE87]/30">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-xl text-[11px] font-semibold bg-[#2F9C78]/15 text-[#247F62] border border-[#2F9C78]/30">
                       <ShieldCheck className="w-3 h-3" />
                       {doc.status}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#2D3748] mb-1">
+                  <h3 className="text-base font-bold text-[#263241] mb-1">
                     {doc.title}
                   </h3>
-                  <p className="text-xs text-[#64748B] leading-relaxed">
+                  <p className="text-xs text-[#667085] leading-6">
                     {doc.desc}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#F0F4F8] flex items-center justify-between">
-                  <div className="text-[11px] font-mono text-[#64748B]">
-                    Slot: <code className="bg-[#FAF8F5] px-1.5 py-0.5 rounded">{doc.fileSlot.split("/").pop()}</code>
+                <div className="mt-6 pt-4 border-t border-[#F6F4F0] flex items-center justify-between">
+                  <div className="text-[11px] font-mono text-[#667085]">
+                    Slot: <code className="bg-[#FBFAF8] px-1.5 py-0.5 rounded">{doc.fileSlot.split("/").pop()}</code>
                   </div>
                   <a
                     href={doc.fileSlot}

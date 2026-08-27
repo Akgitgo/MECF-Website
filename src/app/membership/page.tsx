@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import SpecTable, { ColumnDef } from "@/components/SpecTable";
 import CtaBanner from "@/components/CtaBanner";
 import { MEMBERSHIP_TIERS, MembershipTier } from "@/data/siteData";
-import { CheckCircle2, ShieldCheck, Zap, Sparkles, Award, ArrowRight } from "lucide-react";
+import { CheckCircle2, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -66,24 +66,24 @@ export default function MembershipPage() {
       />
 
       {/* 1. Special 50% MSME & MCCIA Discount Offer Spotlight */}
-      <section className="py-10 bg-gradient-to-r from-[#4EAE87] via-[#3D9E78] to-[#3C5068] text-white">
+      <section className="py-8 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2 text-center md:text-left">
-              <span className="inline-block px-3 py-0.5 rounded bg-white/20 text-[11px] font-extrabold tracking-wider uppercase">
+              <span className="inline-block px-3 py-0.5 rounded bg-[#2F9C78]/10 text-[#247F62] border border-[#2F9C78]/20 text-[11px] font-extrabold tracking-wider uppercase">
                 LIMITED-TIME PROMOTION
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white !text-white" style={{ color: '#ffffff' }}>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-[#263241]">
                 Up to 50% Discount for MSMEs &amp; MCCIA Members
               </h2>
-              <p className="text-xs sm:text-sm text-white/90 max-w-2xl leading-relaxed">
-                Avail up to 50% discount on Test &amp; Certification Services and EMI/EMC Services. Offer valid till <strong>31st August 2026</strong>. Terms &amp; conditions apply.
+              <p className="text-xs sm:text-sm text-[#667085] max-w-2xl leading-6">
+                Preferential pricing is available for eligible organizations until <strong>31st August 2026</strong>, subject to terms.
               </p>
             </div>
             <div className="shrink-0 flex items-center gap-3">
               <Link
                 href="/contact"
-                className="px-6 py-3 rounded-xl font-bold bg-white text-[#3C5068] hover:bg-[#F0F4F8] shadow-md text-xs sm:text-sm transition-all"
+                className="px-6 py-3 rounded-xl font-bold bg-[#2F9C78] hover:bg-[#247F62] text-white btn-premium text-xs sm:text-sm transition-all"
               >
                 Claim Discount Offer
               </Link>
@@ -93,17 +93,17 @@ export default function MembershipPage() {
       </section>
 
       {/* 2. Value Prop */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="max-w-3xl mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2F9C78]">
               Why Contribute to MECF?
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#2D3748] mt-1">
-              Guaranteed Priority for High-Volume R&D Pipelines
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#263241] mt-1">
+              Priority access for serious hardware teams.
             </h2>
-            <p className="text-base text-[#64748B] mt-3 leading-relaxed">
-              For manufacturing enterprises running continuous hardware design cycles, testing delays can stall commercial launches by quarters. Contributing to the MECF SPV capital fund guarantees your engineering teams priority chamber reservations and substantial operating discounts.
+            <p className="text-base text-[#667085] mt-3 leading-8">
+              Membership helps teams reserve scarce lab capacity, reduce recurring test costs, and keep certification timelines predictable.
             </p>
           </div>
 
@@ -112,28 +112,28 @@ export default function MembershipPage() {
             {MEMBERSHIP_TIERS.map((tier, idx) => (
               <div
                 key={idx}
-                className={`p-8 rounded-3xl bg-[#FAF8F5] border flex flex-col justify-between apple-card-shadow relative ${
+                className={`p-8 rounded-3xl bg-[#FBFAF8] border flex flex-col justify-between apple-card-shadow relative premium-card ${
                   tier.isPopular
-                    ? "border-[#4EAE87] ring-2 ring-[#4EAE87]/20 bg-white"
-                    : "border-[#E2E8F0]"
+                    ? "border-[#2F9C78] ring-2 ring-[#2F9C78]/20 bg-white"
+                    : "border-[#E7E2D9]"
                 }`}
               >
                 {tier.isPopular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[11px] font-bold bg-[#4EAE87] text-white tracking-wide uppercase">
-                    Most Popular Tier
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-xl text-[11px] font-bold bg-[#4EAE87] text-white tracking-wide uppercase">
+                    Most Selected
                   </div>
                 )}
 
                 <div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                  <div className="text-xs font-bold uppercase tracking-wider text-[#667085]">
                     {tier.tierName}
                   </div>
-                  <div className="text-3xl font-bold text-[#2D3748] mt-2">
+                  <div className="text-3xl font-bold text-[#263241] mt-2">
                     {tier.contribution}
                   </div>
 
                   <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[#4EAE87]/15 text-[#3D9E78] border border-[#4EAE87]/30">
+                    <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[#2F9C78]/12 text-[#247F62] border border-[#2F9C78]/25">
                       {tier.discountRate}
                     </span>
                     <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[#F4A261]/15 text-[#D97706] border border-[#F4A261]/30">
@@ -141,20 +141,20 @@ export default function MembershipPage() {
                     </span>
                   </div>
 
-                  <ul className="mt-6 space-y-3 text-xs text-[#64748B] border-t border-[#E2E8F0] pt-6">
+                  <ul className="mt-6 space-y-3 text-xs text-[#667085] border-t border-[#E7E2D9] pt-6">
                     {tier.features.map((feature, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#4EAE87] shrink-0 mt-0.5" />
-                        <span className="leading-relaxed text-[#2D3748]">{feature}</span>
+                        <CheckCircle2 className="w-4 h-4 text-[#2F9C78] shrink-0 mt-0.5" />
+                        <span className="leading-6 text-[#263241]">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="pt-8 mt-8 border-t border-[#E2E8F0]">
+                <div className="pt-8 mt-8 border-t border-[#E7E2D9]">
                   <Link
                     href="/contact"
-                    className="w-full py-3 rounded-xl font-semibold text-xs text-center block transition-all bg-[#3C5068] hover:bg-[#4EAE87] text-white shadow-xs"
+                    className="w-full py-3 rounded-xl font-semibold text-xs text-center block transition-all bg-[#2F4054] hover:bg-[#2F9C78] text-white shadow-xs"
                   >
                     Apply for Membership
                   </Link>
@@ -166,7 +166,7 @@ export default function MembershipPage() {
       </section>
 
       {/* 2. Detailed Spec Comparison */}
-      <section className="py-16 bg-[#F0F4F8] border-b border-[#E2E8F0]">
+      <section className="py-16 bg-[#F6F4F0] border-b border-[#E7E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="max-w-3xl mb-8">
             <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
@@ -186,20 +186,20 @@ export default function MembershipPage() {
       </section>
 
       {/* 3. Real Testimonials Placeholder Component (Per Prompt §7 & §9) */}
-      <section className="py-16 bg-white border-b border-[#E2E8F0]">
+      <section className="py-16 bg-white border-b border-[#E7E2D9]">
         <div className="max-w-4xl mx-auto px-4 sm:px-8 text-center">
-          <div className="p-8 sm:p-10 rounded-2xl bg-[#FAF8F5] border border-[#E2E8F0] apple-card-shadow">
-            <div className="w-12 h-12 rounded-full bg-[#4EAE87]/15 text-[#4EAE87] flex items-center justify-center mx-auto mb-3">
+          <div className="p-8 sm:p-10 rounded-2xl bg-[#FBFAF8] border border-[#E7E2D9] apple-card-shadow premium-card">
+            <div className="w-12 h-12 rounded-xl bg-[#4EAE87]/15 text-[#4EAE87] flex items-center justify-center mx-auto mb-3">
               <Sparkles className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-bold text-[#2D3748]">
-              Member Testimonials & Impact Stories
+              Member Impact Stories
             </h3>
             <p className="text-xs sm:text-sm text-[#64748B] mt-2 max-w-lg mx-auto">
-              Real endorsements and testing cycle acceleration metrics from MECF member companies across automotive, medical devices, and industrial electronics.
+              Verified quotes and case-study metrics will be published after client approvals.
             </p>
-            <div className="mt-6 p-6 rounded-xl bg-white border border-dashed border-[#E2E8F0] text-xs text-[#64748B] leading-relaxed">
-              Real client testimonials and case study data are undergoing corporate review and approval. Authenticated quotes and verified client company logos will be published in this section.
+            <div className="mt-6 p-6 rounded-xl bg-white border border-dashed border-[#E7E2D9] text-xs text-[#667085] leading-6">
+              This section is intentionally held for authenticated client material only.
             </div>
           </div>
         </div>
