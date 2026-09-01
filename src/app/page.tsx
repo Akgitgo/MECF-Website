@@ -651,8 +651,6 @@ export default function HomePage() {
               {[
                 ...TARGET_AUDIENCES.slice(0, 5),
                 ...TARGET_AUDIENCES.slice(0, 5),
-                ...TARGET_AUDIENCES.slice(0, 5),
-                ...TARGET_AUDIENCES.slice(0, 5),
               ].map((item, idx) => (
                 <SpotlightCard
                   key={`row1-${item.id}-${idx}`}
@@ -675,8 +673,6 @@ export default function HomePage() {
           <div className="-my-4 flex overflow-hidden py-4">
             <div className="animate-marquee-left flex gap-6 px-3">
               {[
-                ...TARGET_AUDIENCES.slice(5, 10),
-                ...TARGET_AUDIENCES.slice(5, 10),
                 ...TARGET_AUDIENCES.slice(5, 10),
                 ...TARGET_AUDIENCES.slice(5, 10),
               ].map((item, idx) => (

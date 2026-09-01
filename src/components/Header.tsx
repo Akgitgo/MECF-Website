@@ -15,7 +15,6 @@ import {
   Cpu,
   ArrowRight,
 } from "lucide-react";
-import { useQuoteModal } from "./QuoteModalContext";
 import { SITE_CONFIG } from "@/data/siteData";
 
 export default function Header() {
@@ -23,7 +22,6 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const { openQuoteModal } = useQuoteModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,7 +84,7 @@ export default function Header() {
             </Link>
 
           {/* Clean Executive Desktop Navigation */}
-          <nav className="site-primary-nav hidden lg:flex items-center gap-6">
+          <nav className="site-primary-nav ml-auto hidden lg:flex items-center gap-5 xl:gap-6">
             <Link
               href="/"
                 className={`text-xs font-semibold tracking-wide transition-colors relative py-1 premium-link ${
@@ -247,14 +245,7 @@ export default function Header() {
               Contact
             </Link>
           </nav>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => openQuoteModal()}
-              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-[#2F9C78] hover:bg-[#247F62] active:scale-[0.98] transition-all btn-premium cursor-pointer"
-            >
-              Get a Quote
-            </button>
-
+          <div className="ml-3 flex items-center">
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -347,15 +338,6 @@ export default function Header() {
             </div>
 
             <div className="mt-5 pt-4 border-t border-[#E2E8F0] flex flex-col gap-2.5">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  openQuoteModal();
-                }}
-                className="w-full py-2.5 rounded-xl font-semibold text-center text-white bg-[#2F9C78] hover:bg-[#247F62] text-xs btn-premium"
-              >
-                Get a Quote / Book Slot
-              </button>
               <a
                 href={`tel:${SITE_CONFIG.phoneFormatted}`}
                 className="w-full py-2.5 rounded-xl font-medium text-center text-[#2D3748] bg-[#F0F4F8] hover:bg-[#E2E8F0] text-xs flex items-center justify-center gap-2"

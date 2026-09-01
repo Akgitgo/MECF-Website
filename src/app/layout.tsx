@@ -6,7 +6,7 @@ import { QuoteModalProvider } from "@/components/QuoteModalContext";
 import QuoteModal from "@/components/QuoteModal";
 
 export const viewport: Viewport = {
-  themeColor: "#3C5068",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1,
 };
@@ -62,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full scroll-smooth" data-scroll-behavior="smooth">
-      <body className="min-h-full flex flex-col bg-[#FBFAF8] text-[#263241] font-sans antialiased">
+      <body className="min-h-full flex flex-col bg-white text-[#263241] font-sans antialiased">
         <QuoteModalProvider>
           <Header />
           <main className="flex-1">{children}</main>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Poppins:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Poppins:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 /* Keep the site's button language consistent even when component utilities add a radius. */
@@ -12,8 +12,8 @@ a[href^="tel:"] {
 
 /* Shared page wrappers should breathe across the viewport instead of leaving oversized side gutters. */
 [class*="max-w-7xl"][class*="mx-auto"] {
-  max-width: 90rem;
-  padding-inline: clamp(1rem, 3vw, 2.5rem) !important;
+  max-width: 94rem;
+  padding-inline: var(--page-gutter) !important;
 }
 
 .site-footer [class~="text-white"] {
@@ -50,7 +50,7 @@ h1 {
 
 h2,
 h3 {
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 @layer base {
@@ -58,18 +58,19 @@ h3 {
     --font-sans: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-heading: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-label: 'Poppins', 'DM Sans', system-ui, sans-serif;
+    --page-gutter: clamp(1.25rem, 3.2vw, 2.75rem);
 
-    --color-bg: #FBFAF8;            /* Premium off-white */
+    --color-bg: #FFFFFF;
     --color-surface: #FFFFFF;
-    --color-surface-alt: #F6F4F0;    /* Warm white section contrast */
+    --color-surface-alt: #FFFFFF;
     --color-glass: rgba(255, 255, 255, 0.76);
-    --color-text-primary: #263241;   /* Quiet graphite */
-    --color-text-secondary: #667085; /* Premium muted text */
-    --color-border: #E7E2D9;        /* Soft warm hairline */
+    --color-text-primary: #1F2D2A;
+    --color-text-secondary: #66736F;
+    --color-border: #E3E9E6;
 
-    --color-primary: #2F4054;       /* Technical slate */
-    --color-accent: #2F9C78;        /* Controlled trust green */
-    --color-accent-hover: #247F62;
+    --color-primary: #1F2D2A;
+    --color-accent: #1F8A66;
+    --color-accent-hover: #176B50;
     --color-orange: #D89A45;
     --color-orange-hover: #B8792D;
     --color-success: #52B788;
@@ -96,6 +97,11 @@ h3 {
     -moz-osx-font-smoothing: grayscale;
   }
 
+  p {
+    font-family: var(--font-label);
+    font-weight: 400;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--color-primary);
@@ -107,10 +113,7 @@ h3 {
     font-weight: 800;
   }
 
-  h2 {
-    font-weight: 750;
-  }
-
+  h2,
   h3 {
     font-weight: 700;
   }
@@ -476,6 +479,208 @@ h3 {
   }
 }
 
+/* September 2026 visual-system consolidation */
+html,
+body {
+  background: #ffffff;
+}
+
+main {
+  background: #ffffff;
+}
+
+main section {
+  position: relative;
+  background: #ffffff !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+main section:not(.hero-stage-wrap):not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4.5rem;
+  height: 0.5rem;
+  transform: translateX(-50%);
+  border-top: 1px solid #dfe7e3;
+  border-right: 1px solid #dfe7e3;
+  border-left: 1px solid #dfe7e3;
+  pointer-events: none;
+}
+
+main [class~="bg-[#FAF8F5]"],
+main [class~="bg-[#FBFAF8]"],
+main [class~="bg-[#F6F4F0]"] {
+  background-color: #ffffff !important;
+}
+
+main [class~="rounded-2xl"]:not([class~="!rounded-none"]),
+main [class~="rounded-3xl"]:not([class~="!rounded-none"]),
+.app-store-card,
+.image-card-interactive,
+.premium-card {
+  border-radius: 0.75rem !important;
+}
+
+.premium-card,
+.apple-card-shadow,
+.app-store-card,
+.image-card-interactive {
+  box-shadow: 0 8px 24px rgba(31, 45, 42, 0.06) !important;
+}
+
+.premium-card:hover,
+.apple-card-hover:hover,
+.app-store-card:hover,
+.image-card-interactive:hover,
+.card-spotlight:hover {
+  transform: translateY(-3px);
+  border-color: rgba(31, 138, 102, 0.28);
+  box-shadow: 0 16px 36px rgba(31, 45, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+button:hover {
+  box-shadow: 0 10px 24px rgba(31, 45, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.hero-stage-wrap {
+  min-height: calc(100svh - 72px);
+  padding: 0;
+  background: #ffffff !important;
+}
+
+.shader-hero-shell {
+  position: relative;
+  min-height: max(620px, calc(100svh - 72px));
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #13241f;
+  box-shadow: none !important;
+}
+
+.hero-image-layer {
+  inset: 0;
+  background-image:
+    linear-gradient(180deg, rgba(8, 20, 18, 0.56), rgba(8, 20, 18, 0.48)),
+    url("/assets/images/hero/hero-chamber-modern.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: none;
+  transition: none;
+}
+
+.shader-hero-shell:hover .hero-image-layer {
+  transform: none;
+}
+
+.hero-shader-layer {
+  display: none;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  max-width: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(5rem, 9vw, 8rem) var(--page-gutter) 8rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  max-width: 66rem;
+  color: #ffffff;
+  font-size: clamp(2.6rem, 5.7vw, 5.8rem);
+  font-weight: 800;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.hero-content h1 span,
+.hero-content h1 .hero-headline-line {
+  color: #ffffff;
+}
+
+.hero-content p {
+  max-width: 45rem;
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-label);
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.hero-quote-cta {
+  margin-top: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: #1f8a66;
+  padding: 0.95rem 1.45rem;
+  box-shadow: none;
+}
+
+.hero-quote-cta:hover {
+  transform: translateY(-2px);
+  background: #176b50;
+  box-shadow: 0 10px 24px rgba(5, 15, 12, 0.18);
+}
+
+.hero-footnote {
+  left: var(--page-gutter);
+  right: var(--page-gutter);
+  bottom: 1.75rem;
+  justify-content: center;
+  border-top-color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-label);
+  font-weight: 500;
+}
+
+.site-primary-nav {
+  justify-content: flex-end;
+}
+
+.site-primary-nav .premium-link {
+  font-family: var(--font-label);
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+.animate-marquee-left,
+.animate-marquee-right {
+  animation-duration: 46s;
+  will-change: transform;
+}
+
+@media (max-width: 767px) {
+  .shader-hero-shell {
+    min-height: max(590px, calc(100svh - 68px));
+  }
+
+  .hero-image-layer {
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    top: 0;
+    padding: 5rem 1.25rem 8.5rem;
+  }
+
+  .hero-content h1 .hero-headline-line {
+    white-space: normal;
+  }
+
+  .hero-footnote {
+    gap: 0.5rem 0.9rem;
+    font-size: 0.55rem;
+  }
+}
+
 .btn-premium {
   box-shadow: 0 12px 28px rgba(47, 156, 120, 0.22);
 }
@@ -677,4 +882,49 @@ button:hover {
     transform: none !important;
     filter: none !important;
   }
+}
+
+/* Final interaction overrides: restrained motion and low-cost shadows. */
+.animate-marquee-left,
+.animate-marquee-right {
+  animation-duration: 46s;
+  will-change: transform;
+}
+
+.app-store-card,
+.image-card-interactive {
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(31, 45, 42, 0.06);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.app-store-card:hover,
+.image-card-interactive:hover {
+  transform: translateY(-3px);
+  border-color: rgba(31, 138, 102, 0.28);
+  box-shadow: 0 16px 36px rgba(31, 45, 42, 0.1);
+}
+
+.app-store-card img,
+.image-card-interactive img,
+.card-image-zoom {
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.app-store-card:hover img,
+.image-card-interactive:hover img,
+.image-card-interactive:hover .card-image-zoom {
+  transform: scale(1.025);
+  filter: none;
+  will-change: auto;
+}
+
+.btn-premium {
+  box-shadow: none;
+}
+
+.btn-premium:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(31, 45, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
