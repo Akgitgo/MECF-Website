@@ -69,14 +69,14 @@ export default function EmiEmcPage() {
               50% DISCOUNT OFFER
             </span>
             <span className="text-xs sm:text-sm font-bold text-white">
-              Up to 50% Discount for MSMEs &amp; MCCIA Members on EMI/EMC Chamber Services (Valid till 31st August 2026)
+              Flat 50% Discount for MCCIA Members on EMI/EMC Chamber Services
             </span>
           </div>
           <a
             href="/contact"
             className="px-4 py-2 rounded-lg bg-[#2F9C78] text-white font-bold text-xs hover:bg-[#247F62] transition-colors shrink-0"
           >
-            Claim Offer / Book Chamber
+            Claim Offer / Book Facility/Services
           </a>
         </div>
       </section>

@@ -16,7 +16,7 @@ export default function ModernHero() {
             <span className="hero-headline-line">Built for the hardware</span>
             <span className="hero-headline-line">that moves India forward.</span>
           </h1>
-          <p>World-class EMI/EMC, safety, IP and reliability testing at a ₹71 Crore facility in Pune, operated with TÜV Rheinland and Cyronics.</p>
+          <p>EMI/EMC, safety, IP and reliability testing at the world-class facility in Pune, operated with our trusted partners TÜV Rheinland, 3D Engineering and Cyronics Instruments Private Limited.</p>
           <button type="button" onClick={() => openQuoteModal()} className="hero-quote-cta">
             <span>Get a Testing Quote</span>
             <ArrowRight className="h-5 w-5" />

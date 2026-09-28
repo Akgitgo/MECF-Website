@@ -12,7 +12,6 @@ interface PageHeaderProps {
 }
 
 export default function PageHeader({
-  badge,
   title,
   description,
   breadcrumbs = [{ label: "Home", href: "/" }],
@@ -47,12 +46,6 @@ export default function PageHeader({
               {title}
             </span>
           </nav>
-
-          {badge && (
-            <div className="inline-flex items-center px-3 py-1 rounded-xl text-xs font-semibold bg-white/10 text-white/90 border border-white/20 mb-4 font-label">
-              {badge}
-            </div>
-          )}
 
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white max-w-3xl leading-tight">
             {title} {highlight && <span className="text-[#74C69D]">{highlight}</span>}
@@ -93,12 +86,6 @@ export default function PageHeader({
             {title}
           </span>
         </nav>
-
-        {badge && (
-          <div className="inline-flex items-center px-3 py-1 rounded-xl text-xs font-semibold bg-[#2F9C78]/12 text-[#247F62] border border-[#2F9C78]/25 mb-4 font-label">
-            {badge}
-          </div>
-        )}
 
         <h1 className="text-3xl sm:text-5xl font-extrabold text-[#263241] max-w-3xl leading-tight">
           {title} {highlight && <span className="text-[#2F9C78]">{highlight}</span>}

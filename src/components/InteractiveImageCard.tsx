@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import ImageSlot from "./ImagePlaceholder";
-import { ArrowRight, Sparkles, type LucideIcon } from "lucide-react";
+import { ArrowRight, type LucideIcon } from "lucide-react";
 
 export interface InteractiveImageCardProps {
   title: string;
@@ -23,8 +23,6 @@ export interface InteractiveImageCardProps {
 
 export default function InteractiveImageCard({
   title,
-  category,
-  badge,
   description,
   imageSrc,
   imageAlt,
@@ -49,21 +47,6 @@ export default function InteractiveImageCard({
 
         {/* Gradient Overlay for Text Legibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-between p-6 text-white transition-opacity duration-300">
-          {/* Top Row: Floating Badge & Icon */}
-          <div className="flex items-center justify-between">
-            {category && (
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-white/20 backdrop-blur-md border border-white/30 text-white shadow-xs group-hover:bg-[#2F9C78] group-hover:border-[#2F9C78] transition-[background-color,border-color] duration-300 motion-reduce:transition-none">
-                <Sparkles className="w-3 h-3 text-amber-300" />
-                {category}
-              </span>
-            )}
-            {badge && (
-              <span className="ml-auto px-3 py-1 rounded-full text-[11px] font-bold bg-black/40 backdrop-blur-md border border-white/20 text-emerald-300">
-                {badge}
-              </span>
-            )}
-          </div>
-
           {/* Bottom Overlay Title */}
           <div className="mt-auto transform-gpu transition-transform duration-300 group-hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none">
             <div className="flex items-center gap-2 mb-1">

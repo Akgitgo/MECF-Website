@@ -61,7 +61,7 @@ export default function BackgroundPage() {
     {
       date: "October 2017",
       title: "Section 8 SPV Incorporation",
-      desc: "MCCIA leads the incorporation of MCCIA Electronic Cluster Foundation as a dedicated not-for-profit Special Purpose Vehicle (SPV).",
+      desc: "MCCIA leads the incorporation of MCCIA Electronic Cluster Foundation as a dedicated not-for-profit Section 8 Organization.",
     },
     {
       date: "December 2017",

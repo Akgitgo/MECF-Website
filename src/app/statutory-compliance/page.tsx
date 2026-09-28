@@ -71,7 +71,7 @@ export default function StatutoryCompliancePage() {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#2F9C78] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-sm text-[#263241]">Section 8 Special Purpose Vehicle (SPV):</strong>
+                    <strong className="text-sm text-[#263241]">Section 8 Organization:</strong>
                     <span className="text-sm text-[#667085] ml-1">
                       Promoted by MCCIA with no commercial dividend distribution; all revenues are reinvested into lab instrumentation.
                     </span>

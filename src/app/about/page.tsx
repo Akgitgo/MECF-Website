@@ -42,7 +42,7 @@ export default function AboutPage() {
         badge="Institutional Overview & Governance"
         title="About MECF"
         highlight="& Governance"
-        description="Incorporated as a Section 8 Special Purpose Vehicle by MCCIA to provide common, high-end electronics testing infrastructure for India's engineering industry."
+        description="Incorporated as a Section 8 Organization by MCCIA to provide common, high-end electronics testing infrastructure for India's engineering industry."
         breadcrumbs={[{ label: "Home", href: "/" }]}
       />
 
@@ -190,20 +190,17 @@ export default function AboutPage() {
                     className="rounded-xl overflow-hidden mb-4"
                   />
 
-                  <div className="space-y-1">
-                    <span className="px-2.5 py-0.5 rounded-xl text-[11px] font-bold bg-[#FBFAF8] text-[#2F4054] border border-[#E7E2D9] inline-block">
-                      {member.designation}
-                    </span>
-                    <h3 className="text-base font-bold text-[#263241] tracking-tight pt-1">
-                      {member.name}
-                    </h3>
-                  </div>
+                  <h3 className="text-base font-bold text-[#263241] tracking-tight">
+                    {member.name}
+                  </h3>
                 </div>
 
                 <div className="pt-3 mt-3 border-t border-[#E7E2D9]">
-                  <span className="text-xs font-medium text-[#667085] block truncate">
-                    {member.organization}
-                  </span>
+                  <div className="text-sm text-[#667085] leading-relaxed">
+                    <strong className="font-semibold text-[#263241]">{member.designation}</strong>
+                    <span aria-hidden="true"> · </span>
+                    <span>{member.organization}</span>
+                  </div>
                 </div>
               </div>
             ))}

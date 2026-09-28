@@ -146,7 +146,7 @@ export default function TestCertificationPage() {
               50% DISCOUNT OFFER
             </span>
             <span className="text-xs sm:text-sm font-bold text-white">
-              Up to 50% Discount for MSMEs &amp; MCCIA Members on Test &amp; Certification Services (Valid till 31st August 2026)
+              Flat 50% Discount for MCCIA Members on Test &amp; Certification Services
             </span>
           </div>
           <a

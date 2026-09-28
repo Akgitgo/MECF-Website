@@ -928,3 +928,121 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(31, 45, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
+
+/* Readability pass: remove decorative tags and establish a larger type scale. */
+body {
+  font-size: 17px;
+}
+
+main p {
+  font-size: clamp(1rem, 0.96rem + 0.12vw, 1.075rem) !important;
+  line-height: 1.75 !important;
+}
+
+main h2 {
+  font-size: clamp(1.9rem, 2.5vw, 2.75rem) !important;
+  line-height: 1.15 !important;
+}
+
+main h3 {
+  font-size: clamp(1.2rem, 1.35vw, 1.45rem) !important;
+  line-height: 1.3 !important;
+}
+
+main h4 {
+  font-size: 1.05rem !important;
+  line-height: 1.35 !important;
+}
+
+main [class~="text-[10px]"],
+footer [class~="text-[10px]"] {
+  font-size: 0.8rem !important;
+}
+
+main [class~="text-[11px]"],
+footer [class~="text-[11px]"] {
+  font-size: 0.85rem !important;
+}
+
+main [class~="text-xs"],
+footer [class~="text-xs"] {
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+main [class~="text-sm"],
+footer [class~="text-sm"] {
+  font-size: 1rem !important;
+}
+
+.site-primary-nav .premium-link {
+  font-size: 0.95rem;
+}
+
+header nav,
+header button,
+header a {
+  font-size: 0.95rem;
+}
+
+header [class~="text-[10px]"] {
+  font-size: 0.8rem !important;
+}
+
+header [class~="text-[11px]"] {
+  font-size: 0.85rem !important;
+}
+
+header [class~="text-xs"] {
+  font-size: 0.9rem !important;
+}
+
+.hero-footnote {
+  font-size: 0.78rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+.spec-table {
+  font-size: 1rem;
+}
+
+.spec-table th {
+  font-size: 0.875rem;
+}
+
+main span[class*="uppercase"],
+main div[class*="uppercase"][class*="text-xs"],
+main span[class*="rounded"][class*="text-xs"],
+main span[class*="rounded"][class*="text-[11px]"],
+main div[class*="rounded"][class*="text-[11px]"],
+footer span[class*="rounded"][class*="text-xs"],
+.badge-success,
+.badge-warning,
+.badge-accent {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+
+  main h2 {
+    font-size: 1.75rem !important;
+  }
+
+  main h3 {
+    font-size: 1.2rem !important;
+  }
+
+  main p,
+  main [class~="text-sm"] {
+    font-size: 0.975rem !important;
+  }
+}

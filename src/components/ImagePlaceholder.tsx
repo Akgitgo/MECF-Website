@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Image as ImageIcon, Sparkles } from "lucide-react";
+import { Image as ImageIcon } from "lucide-react";
 
 interface ImageSlotProps {
   src: string;
@@ -36,7 +36,6 @@ export default function ImageSlot({
   recommendedDimensions,
   aspectRatio = "aspect-video",
   priority = false,
-  badge,
   overlayTitle,
   overlaySub,
   interactive = true,
@@ -67,31 +66,18 @@ export default function ImageSlot({
             }`}
           />
 
-          {(overlayTitle || badge) && (
+          {overlayTitle && (
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent flex flex-col justify-between p-5 sm:p-6 text-white pointer-events-none">
-              {badge ? (
-                <div className="self-start">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-white/20 backdrop-blur-md border border-white/30 text-white shadow-xs group-hover:bg-[#2F9C78] group-hover:border-[#2F9C78] transition-[background-color,border-color] duration-300 motion-reduce:transition-none">
-                    <Sparkles className="w-3 h-3 text-amber-300" />
-                    {badge}
+              <div className="mt-auto transform-gpu transition-transform duration-300 group-hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none">
+                {overlaySub && (
+                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#4EAE87] block mb-0.5">
+                    {overlaySub}
                   </span>
-                </div>
-              ) : (
-                <div />
-              )}
-
-              {overlayTitle && (
-                <div className="mt-auto transform-gpu transition-transform duration-300 group-hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none">
-                  {overlaySub && (
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#4EAE87] block mb-0.5">
-                      {overlaySub}
-                    </span>
-                  )}
-                  <h4 className="text-base sm:text-lg font-bold text-white leading-snug drop-shadow-sm">
-                    {overlayTitle}
-                  </h4>
-                </div>
-              )}
+                )}
+                <h4 className="text-base sm:text-lg font-bold text-white leading-snug drop-shadow-sm">
+                  {overlayTitle}
+                </h4>
+              </div>
             </div>
           )}
         </>

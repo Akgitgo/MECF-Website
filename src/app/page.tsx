@@ -350,9 +350,6 @@ export default function HomePage() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-[#263241]">
               {PROMO_OFFER.title}
             </h2>
-            <p className="text-xs sm:text-sm text-[#667085] max-w-2xl">
-              Preferential pricing for eligible MSMEs and MCCIA members. Valid till <strong>31st August 2026</strong>, subject to terms.
-            </p>
           </div>
           <div className="flex items-center gap-4 shrink-0">
             <button
@@ -427,7 +424,7 @@ export default function HomePage() {
                 A National Infrastructure Asset for Electronics Innovation
               </h2>
               <p className="text-base text-[#64748B] leading-relaxed">
-                MCCIA Electronic Cluster Foundation (MECF) was incorporated as a Section 8 not-for-profit Special Purpose Vehicle (SPV) by the Mahratta Chamber of Commerce, Industries and Agriculture (MCCIA). Approved under MeitY&apos;s Electronics Manufacturing Cluster (EMC) scheme, MECF delivers high-capital testing infrastructure to Indian manufacturers, MSMEs, startups, and multinationals without prohibitive individual capex.
+                MCCIA Electronic Cluster Foundation (MECF) was incorporated as a Section 8 Organization by the Mahratta Chamber of Commerce, Industries and Agriculture (MCCIA). Approved under MeitY&apos;s Electronics Manufacturing Cluster (EMC) scheme, MECF delivers high-capital testing infrastructure to Indian manufacturers, MSMEs, startups, and multinationals without prohibitive individual capex.
               </p>
 
               <div className="space-y-3 pt-2">
@@ -613,7 +610,7 @@ export default function HomePage() {
                       onClick={() => openQuoteModal(service.title)}
                       className="text-xs font-bold text-[#4EAE87] hover:underline cursor-pointer"
                     >
-                      Book Chamber →
+                      Book Facility/Services →
                     </button>
                   </div>
                 </MagicBentoCard>

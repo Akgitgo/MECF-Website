@@ -74,11 +74,8 @@ export default function MembershipPage() {
                 LIMITED-TIME PROMOTION
               </span>
               <h2 className="text-xl sm:text-2xl font-extrabold text-[#263241]">
-                Up to 50% Discount for MSMEs &amp; MCCIA Members
+                Flat 50% Discount for MCCIA Members
               </h2>
-              <p className="text-xs sm:text-sm text-[#667085] max-w-2xl leading-6">
-                Preferential pricing is available for eligible organizations until <strong>31st August 2026</strong>, subject to terms.
-              </p>
             </div>
             <div className="shrink-0 flex items-center gap-3">
               <Link
