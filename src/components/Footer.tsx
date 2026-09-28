@@ -75,7 +75,7 @@ export default function Footer() {
           {/* Col 1: About / Brand Lockup */}
           <div className="lg:col-span-2 space-y-4">
             <p className="text-sm text-[#667085] leading-relaxed max-w-sm">
-              Approved Common Facility Centre (CFC) under the Electronics Manufacturing Cluster (EMC) Scheme, Ministry of Electronics & IT (MeitY), Government of India. Operating Section 8 not-for-profit SPV by MCCIA.
+              Approved Common Facility Centre (CFC) under the Electronics Manufacturing Cluster (EMC) Scheme, Ministry of Electronics & IT (MeitY), Government of India. Operating Section 8 Organization by MCCIA.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -266,6 +266,13 @@ export default function Footer() {
                   className="hover:text-white transition-colors"
                 >
                   {SITE_CONFIG.pratikEmail}
+                </a>
+                <span aria-hidden="true" className="text-[#98A2B3]">·</span>
+                <a
+                  href={`mailto:${SITE_CONFIG.mcciaEmail}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {SITE_CONFIG.mcciaEmail}
                 </a>
               </li>
               <li className="flex items-start gap-2">

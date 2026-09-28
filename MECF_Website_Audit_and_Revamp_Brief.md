@@ -132,7 +132,7 @@ Orphaned/legacy content (not in nav but live):
   12. Shri Sadashiv Survase — Joint Director, Industries DIC, Govt. of Maharashtra
 - **Executive Committee table** (4 members): Mr. Prashant Girbane (Director), Mr. Sunil Sapre (Director), Mr. Anand Bedarkar (Director), Mr. S M Gadgil (CEO)
   - *(Note: your brief names the CEO as Shrikrishna Gadgil at ceo@mecf.in — site lists "S M Gadgil, CEO" — worth reconciling which is current/correct for the revamp.)*
-- **Our Team table** (3 staff): Mr. Sachin Ghokse (Maintenance Incharge), Mr. Arvind Kadam (Accounts), Ms. Pooja Shinde (Reception and Administration) — with emails/mobiles
+- **Our Team table** (3 staff): Mr. Ketan Patil (Maintenance Incharge), Mr. Yuvraj Pawar (Accounts), Ms. Pooja Shinde (Reception and Administration) — with emails/mobiles
 
 ### 5.3 Our Commitment (`/commitment/`)
 - Alignment with EMC policy, MeitY, MIDC
@@ -199,7 +199,7 @@ Orphaned/legacy content (not in nav but live):
 - **Location**: MECF, J/P-8, MIDC Bhosari, Telco Road, Ganesh Nagar, Pune 411026, Maharashtra, India
 - **Phone**: +(020) 2997-0416
 - **Email**: ceo@mecf.in
-- **Team contact table**: Mr. Sachin Ghokse (Maintenance Incharge, project@mecf.in, 9665476290), Mr. Arvind Kadam (Accounts, accounts@mecf.in, 7776095169) — *note: Contact page omits Ms. Pooja Shinde who appears on the About Us team table — inconsistent*
+- **Team contact table**: Mr. Ketan Patil (Maintenance Incharge, project@mecf.in, 9511942801), Mr. Yuvraj Pawar (Accounts, accounts@mecf.in, 9762809488) — *note: Contact page omits Ms. Pooja Shinde who appears on the About Us team table — inconsistent*
 - Enquiry form: Service dropdown (Safety / Reliability / Test and Measurement / Equipment on Rental / EMI-EMC), Organization Type dropdown (Registered MSME / MNC / Startup / Incubator / General Industry / Academic Institute)
 - Embedded Google Map (generic query-based embed, not a precise pinned location)
 

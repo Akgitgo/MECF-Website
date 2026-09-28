@@ -95,6 +95,7 @@ export const SITE_CONFIG = {
   email: "ceo@mecf.in",
   generalEmail: "info@mecf.in",
   pratikEmail: "gm@mecf.in",
+  mcciaEmail: "pratikp@mcciapune.com",
   websiteUrl: "https://www.mecfpune.com",
   address: "MECF, J/P-8, MIDC Bhosari, Telco Road, Ganesh Nagar, Bhosari, Pune - 411026 (Maharashtra)",
   workingHours: "Monday – Friday, 09:00 AM – 05:00 PM IST",
@@ -141,7 +142,7 @@ export const TEAM_DIRECTORY: StaffMember[] = [
     name: "Nikhil Jain",
     role: "Chief Executive Officer (CEO)",
     email: "ceo@mecf.in",
-    phone: "+91 99756 06686",
+    phone: "+91 90211 95528",
     department: "Executive Leadership & General Administration",
   },
   {

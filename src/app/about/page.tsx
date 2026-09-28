@@ -58,7 +58,7 @@ export default function AboutPage() {
                 Shared testing infrastructure for India&apos;s electronics ecosystem.
               </h2>
               <p className="text-base text-[#667085] leading-8">
-                MECF was created by MCCIA as a Section 8 SPV to make high-end electronics testing accessible without each company building its own lab.
+                MECF was created by MCCIA as a Section 8 Organization to make high-end electronics testing accessible without each company building its own lab.
               </p>
               <p className="text-base text-[#667085] leading-8">
                 The facility supports startups, MSMEs, defense innovators, and multinationals with pay-per-use access to compliance-grade infrastructure.
@@ -67,7 +67,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-xl bg-[#FBFAF8] border border-[#E7E2D9] about-interactive-card">
                   <div className="text-xs font-bold text-[#2F4054] uppercase">Legal Status</div>
-                  <div className="text-sm font-semibold text-[#263241] mt-1">Section 8 Not-For-Profit SPV</div>
+                  <div className="text-sm font-semibold text-[#263241] mt-1">Section 8 Organization</div>
                   <div className="text-xs text-[#667085] mt-0.5">Surplus reinvested into lab upgrades</div>
                 </div>
                 <div className="p-4 rounded-xl bg-[#FBFAF8] border border-[#E7E2D9] about-interactive-card">

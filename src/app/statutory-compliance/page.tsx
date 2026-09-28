@@ -8,7 +8,7 @@ import { ShieldCheck, Download, Landmark, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Statutory & Compliance Disclosures — NABL Accreditation & Section 8 Details",
   description:
-    "Review MECF's statutory registration details, Section 8 not-for-profit company disclosures, MeitY EMC scheme sanction references, and NABL accreditation status.",
+    "Review MECF's statutory registration details, Section 8 Organization disclosures, MeitY EMC scheme sanction references, and NABL accreditation status.",
 };
 
 export default function StatutoryCompliancePage() {
@@ -32,7 +32,7 @@ export default function StatutoryCompliancePage() {
       category: "Corporate Incorporation",
       fileSlot: "/assets/docs/section-8-incorporation.pdf",
       status: "Registrar of Companies (RoC) Pune",
-      desc: "Incorporation certificate for MCCIA Electronic Cluster Foundation as a dedicated not-for-profit SPV.",
+      desc: "Incorporation certificate for MCCIA Electronic Cluster Foundation as a dedicated Section 8 Organization.",
     },
     {
       title: "Annual Compliance & Environmental Governance",
@@ -111,7 +111,7 @@ export default function StatutoryCompliancePage() {
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#E7E2D9]">
                   <span className="text-[#667085]">Corporate Form:</span>
-                  <span className="font-semibold text-[#263241]">Section 8 Not-For-Profit</span>
+                  <span className="font-semibold text-[#263241]">Section 8 Organization</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#E7E2D9]">
                   <span className="text-[#667085]">Promoting Body:</span>

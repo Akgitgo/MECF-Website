@@ -14,7 +14,7 @@ import CounterNumber from "@/components/CounterNumber";
 export const metadata: Metadata = {
   title: "The EMC Scheme & MECF Origin",
   description:
-    "Explore the history of the Brownfield Electronics Manufacturing Cluster (EMC) in Pune, MeitY approval in Dec 2017, Section 8 SPV incorporation, and the ₹67 Cr funding breakdown.",
+    "Explore the history of the Brownfield Electronics Manufacturing Cluster (EMC) in Pune, MeitY approval in Dec 2017, Section 8 Organization incorporation, and the ₹67 Cr funding breakdown.",
 };
 
 interface FundingItem {
@@ -60,7 +60,7 @@ export default function BackgroundPage() {
     },
     {
       date: "October 2017",
-      title: "Section 8 SPV Incorporation",
+      title: "Section 8 Organization Incorporation",
       desc: "MCCIA leads the incorporation of MCCIA Electronic Cluster Foundation as a dedicated not-for-profit Section 8 Organization.",
     },
     {
@@ -125,12 +125,12 @@ export default function BackgroundPage() {
                 className="shadow-md"
               />
 
-              <div className="p-6 rounded-2xl bg-[#2F4054] text-white">
+              <div className="p-6 rounded-2xl bg-white border border-[#E7E2D9] text-[#263241] shadow-sm">
                 <div className="flex items-center gap-3 mb-2">
                   <Landmark className="w-5 h-5 text-[#74C69D]" />
                   <h4 className="text-sm font-bold">Section 8 Non-Profit Framework</h4>
                 </div>
-                <p className="text-xs text-white/80 leading-relaxed">
+                <p className="text-xs text-[#667085] leading-relaxed">
                   MECF operates strictly on a cost-recovery, non-profit mandate where all operating surpluses are directly reinvested to add newer international standards, RF amplifiers, and environmental chambers.
                 </p>
               </div>
