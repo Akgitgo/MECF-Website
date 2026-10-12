@@ -286,7 +286,7 @@ export default function HomePage() {
 
                 <div className="relative rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl border border-[#E7E2D9] group bg-slate-950 min-h-[380px] sm:min-h-[480px] lg:min-h-[520px] flex items-center justify-center">
                   <Image
-                    src="/assets/images/hero/hero-chamber-modern.jpg"
+                    src="/assets/images/facility/mecf-building-exterior.jpg"
                     alt="MECF Pune 10m Semi-Anechoic Chamber for EMI EMC testing"
                     fill
                     className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-700"
@@ -468,8 +468,8 @@ export default function HomePage() {
                 className="app-store-card rounded-3xl overflow-hidden shadow-2xl border border-[#E7E2D9]"
               >
                 <ImageSlot
-                  src="/assets/images/hero/hero-facility-02.jpg"
-                  alt="Engineers at work in MECF NABL Accredited testing laboratory"
+                  src="/assets/images/facility/mecf-entrance.jpg"
+                  alt="Entrance and signage of the MCCIA Electronic Cluster Foundation facility in Pune"
                   width={1200}
                   height={800}
                   badge="MeitY Approved & NABL Accredited"
@@ -479,6 +479,77 @@ export default function HomePage() {
                 />
               </SpotlightCard>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Inside the Facility Gallery */}
+      <section className="py-16 sm:py-20 bg-[#FAF8F5] border-b border-[#E2E8F0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4EAE87]">
+                Inside the Facility
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#2D3748] mt-1">
+                Four Floors of Testing Infrastructure
+              </h2>
+              <p className="text-sm sm:text-base text-[#64748B] mt-2">
+                From the lower-ground shock and vibration lab to the second-floor EMI/EMC chamber, every vertical sits under one roof at MIDC Bhosari, Pune.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#4EAE87] hover:underline"
+            >
+              <span>Plan a facility visit</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              {
+                src: "/assets/images/facility/shock-vibration-lab.jpg",
+                alt: "Electrodynamic vibration shaker and climatic test chamber in the MECF shock and vibration lab",
+                title: "Shock & Vibration Lab",
+                sub: "Lower Ground Floor",
+              },
+              {
+                src: "/assets/images/facility/environmental-chambers.jpg",
+                alt: "Row of environmental and climatic test chambers in the MECF Test and Certification lab",
+                title: "Environmental Test Chambers",
+                sub: "Test & Certification",
+              },
+              {
+                src: "/assets/images/facility/mecf-floor-directory.jpg",
+                alt: "MECF floor directory signboard listing labs on each floor",
+                title: "Floor-by-Floor Directory",
+                sub: "Reception to EMI/EMC Lab",
+              },
+              {
+                src: "/assets/images/facility/mecf-signboard.jpg",
+                alt: "MCCIA Electronic Cluster Foundation signboard on the facility building",
+                title: "MCCIA Electronic Cluster Foundation",
+                sub: "MIDC Bhosari, Pune",
+              },
+            ].map((item) => (
+              <div
+                key={item.src}
+                className="rounded-3xl overflow-hidden shadow-[0_18px_48px_rgba(38,50,65,0.1)] border border-[#E7E2D9]"
+              >
+                <ImageSlot
+                  src={item.src}
+                  alt={item.alt}
+                  width={1200}
+                  height={800}
+                  overlayTitle={item.title}
+                  overlaySub={item.sub}
+                  aspectRatio="aspect-[3/2]"
+                  className="rounded-none border-0"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

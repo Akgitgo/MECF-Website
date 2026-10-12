@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
+import ImageSlot from "@/components/ImagePlaceholder";
 import EnquiryForm from "@/components/EnquiryForm";
 import SpecTable, { ColumnDef } from "@/components/SpecTable";
 import { SITE_CONFIG, TEAM_DIRECTORY, StaffMember } from "@/data/siteData";
@@ -153,6 +154,50 @@ export default function ContactPage() {
             data={TEAM_DIRECTORY}
             caption="MECF Operational Contact Directory"
           />
+        </div>
+      </section>
+
+      {/* Arriving at the Facility */}
+      <section className="py-16 bg-white border-b border-[#E7E2D9]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <div className="max-w-3xl mb-8">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#5C82A6]">
+              Arriving at MECF
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#263241] mt-1">
+              What to Look For
+            </h2>
+            <p className="text-sm text-[#667085] mt-2">
+              Look for the cream-and-stone building with the MCCIA Electronic Cluster Foundation signboard. Reception and parking are on the lower ground floor.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-3xl overflow-hidden border border-[#E7E2D9] shadow-xs">
+              <ImageSlot
+                src="/assets/images/facility/mecf-building-exterior.jpg"
+                alt="MECF building viewed from the road at MIDC Bhosari"
+                width={1200}
+                height={800}
+                overlayTitle="MECF Building"
+                overlaySub="View from the Road"
+                aspectRatio="aspect-[3/2]"
+                className="rounded-none border-0"
+              />
+            </div>
+            <div className="rounded-3xl overflow-hidden border border-[#E7E2D9] shadow-xs">
+              <ImageSlot
+                src="/assets/images/facility/mecf-entrance.jpg"
+                alt="MECF main entrance with floor directory signboard"
+                width={1200}
+                height={800}
+                overlayTitle="Main Entrance"
+                overlaySub="Floor Directory on the Right"
+                aspectRatio="aspect-[3/2]"
+                className="rounded-none border-0"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

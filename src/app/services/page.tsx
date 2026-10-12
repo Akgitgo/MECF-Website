@@ -39,7 +39,7 @@ export default function ServicesPage() {
         "3.5-Ton Force Vibration Shaker (5 Hz – 3000 Hz) & Mechanical Shock",
         "Photometry Testing & Electrical Safety & Reliability Lab",
       ],
-      image: "/assets/images/facility/environmental-lab.jpg",
+      image: "/assets/images/facility/environmental-chambers.jpg",
     },
     {
       id: "emi-emc",

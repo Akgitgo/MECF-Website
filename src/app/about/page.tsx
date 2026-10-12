@@ -81,18 +81,60 @@ export default function AboutPage() {
             <div className="lg:col-span-5 about-reveal about-reveal-delay-2">
               <div className="app-store-card rounded-3xl overflow-hidden shadow-xl border border-[#E7E2D9]">
                 <ImageSlot
-                  src="/assets/images/facility/design-prototype-center.jpg"
-                  alt="MECF Engineering and Prototyping Centre at Bhosari Pune"
+                  src="/assets/images/facility/mecf-building-exterior.jpg"
+                  alt="MCCIA Electronic Cluster Foundation building at MIDC Bhosari, Pune"
                   width={800}
                   height={600}
                   badge="MIDC Bhosari, Pune"
-                  overlayTitle="MECF Engineering Centre"
+                  overlayTitle="MECF Common Facility Centre"
                   overlaySub="2,500 sq. m. Industrial Infrastructure"
                   recommendedDimensions="800×600 px"
                   aspectRatio="aspect-[4/3]"
                   priority
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry & Stakeholder Engagement */}
+      <section className="py-16 sm:py-20 bg-[#F6F4F0] border-b border-[#E7E2D9]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <div className="max-w-3xl mb-10 about-reveal">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2F9C78]">
+              Industry &amp; Stakeholder Engagement
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#263241] mt-1">
+              Built with the people who use it.
+            </h2>
+            <p className="text-sm text-[#667085] mt-2 leading-7">
+              Industry leaders, chamber members, and technology partners regularly visit the facility to review capabilities and plan testing programmes with the MECF team.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="app-store-card rounded-3xl overflow-hidden shadow-xl border border-[#E7E2D9] about-reveal">
+              <ImageSlot
+                src="/assets/images/clients/team-meet.jpg"
+                alt="Industry leaders and stakeholders greeting each other at the MECF facility entrance"
+                width={1200}
+                height={800}
+                overlayTitle="Welcoming Industry Leaders"
+                overlaySub="At the MECF Entrance"
+                aspectRatio="aspect-[3/2]"
+              />
+            </div>
+            <div className="app-store-card rounded-3xl overflow-hidden shadow-xl border border-[#E7E2D9] about-reveal about-reveal-delay-2">
+              <ImageSlot
+                src="/assets/images/clients/team-discussion.jpg"
+                alt="Industry representatives in discussion at the MECF facility"
+                width={1200}
+                height={800}
+                overlayTitle="Collaboration in Conversation"
+                overlaySub="Industry &amp; Partner Discussions"
+                aspectRatio="aspect-[3/2]"
+              />
             </div>
           </div>
         </div>

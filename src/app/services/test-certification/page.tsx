@@ -194,7 +194,7 @@ export default function TestCertificationPage() {
             <div className="lg:col-span-5">
               <div className="app-store-card rounded-3xl overflow-hidden shadow-xl border border-[#E7E2D9]">
                 <ImageSlot
-                  src="/assets/images/facility/environmental-lab.jpg"
+                  src="/assets/images/facility/environmental-chambers.jpg"
                   alt="Environmental and Safety Testing Laboratory at MECF"
                   width={800}
                   height={600}
